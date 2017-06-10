@@ -26,5 +26,10 @@ public class DAOFactory
         SavedInspectionsDAO savedIns = new SavedInspections();
         return savedIns;
     }
+    public static saveFileDAO getSaveFileDAO()
+    {
+        saveFileDAO saveFile = new saveFile();
+        return saveFile;
+    }
    
 }

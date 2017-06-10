@@ -7,20 +7,14 @@ import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
-import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.text.BadLocationException;
 
 final class InspectionFrame extends javax.swing.JFrame  {
     
@@ -28,6 +22,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     private static SetupDAO setupDAO = null;
     private static PrinterInterface printerint = null;
     private static SavedInspectionsDAO saveInspectDAO = null;
+    private static saveFileDAO savefileDAO = null;
     public InspectionFrame() {
         initComponents();
         
@@ -110,7 +105,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
         SaveFileChooser = new javax.swing.JFileChooser();
         titleLabel = new javax.swing.JLabel();
         InspectionScrollPanel = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        inspectionItemPanel = new javax.swing.JPanel();
         brakeFluid = new javax.swing.JToggleButton();
         coolant = new javax.swing.JToggleButton();
         belts = new javax.swing.JToggleButton();
@@ -748,12 +743,12 @@ final class InspectionFrame extends javax.swing.JFrame  {
         InspectionScrollPanel.setPreferredSize(new java.awt.Dimension(682, 2592));
         InspectionScrollPanel.getVerticalScrollBar().setUnitIncrement(20);
 
-        jPanel1.setAutoscrolls(true);
+        inspectionItemPanel.setAutoscrolls(true);
 
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, brakeFluid, org.jdesktop.beansbinding.ELProperty.create("${selected}"), jPanel1, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, brakeFluid, org.jdesktop.beansbinding.ELProperty.create("${selected}"), inspectionItemPanel, org.jdesktop.beansbinding.BeanProperty.create("enabled"));
         bindingGroup.addBinding(binding);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        inspectionItemPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         brakeFluid.setBackground(new java.awt.Color(0, 255, 51));
         brakeFluid.setText("Brake Fluid");
@@ -768,7 +763,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 brakeFluidActionPerformed(evt);
             }
         });
-        jPanel1.add(brakeFluid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 149, 30));
+        inspectionItemPanel.add(brakeFluid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 149, 30));
 
         coolant.setBackground(new java.awt.Color(0, 255, 51));
         coolant.setText("Coolant");
@@ -783,7 +778,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 coolantActionPerformed(evt);
             }
         });
-        jPanel1.add(coolant, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 47, 149, 30));
+        inspectionItemPanel.add(coolant, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 47, 149, 30));
 
         belts.setBackground(new java.awt.Color(0, 255, 51));
         belts.setText("Belts");
@@ -799,7 +794,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 beltsActionPerformed(evt);
             }
         });
-        jPanel1.add(belts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, 149, 30));
+        inspectionItemPanel.add(belts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 83, 149, 30));
 
         airFilter.setBackground(new java.awt.Color(0, 255, 51));
         airFilter.setText("Air Filter");
@@ -814,7 +809,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 airFilterActionPerformed(evt);
             }
         });
-        jPanel1.add(airFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 119, 149, 30));
+        inspectionItemPanel.add(airFilter, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 119, 149, 30));
 
         oilCondition.setBackground(new java.awt.Color(0, 255, 51));
         oilCondition.setText("Oil Condition");
@@ -829,7 +824,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 oilConditionActionPerformed(evt);
             }
         });
-        jPanel1.add(oilCondition, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 149, 30));
+        inspectionItemPanel.add(oilCondition, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 149, 30));
 
         transmissionFluid.setBackground(new java.awt.Color(0, 255, 51));
         transmissionFluid.setText("Trans Fluid");
@@ -844,7 +839,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 transmissionFluidActionPerformed(evt);
             }
         });
-        jPanel1.add(transmissionFluid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 149, 30));
+        inspectionItemPanel.add(transmissionFluid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 149, 30));
 
         batteryCondition.setBackground(new java.awt.Color(0, 255, 51));
         batteryCondition.setText("Battery Condition");
@@ -860,7 +855,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 batteryConditionActionPerformed(evt);
             }
         });
-        jPanel1.add(batteryCondition, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 149, 30));
+        inspectionItemPanel.add(batteryCondition, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 149, 30));
 
         washerFluid.setBackground(new java.awt.Color(0, 255, 51));
         washerFluid.setText("Washer Fluid");
@@ -874,7 +869,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 washerFluidActionPerformed(evt);
             }
         });
-        jPanel1.add(washerFluid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 149, 30));
+        inspectionItemPanel.add(washerFluid, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 149, 30));
 
         motormounts.setBackground(new java.awt.Color(0, 255, 51));
         motormounts.setText("Motor Mounts");
@@ -888,7 +883,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 motormountsActionPerformed(evt);
             }
         });
-        jPanel1.add(motormounts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 149, 30));
+        inspectionItemPanel.add(motormounts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 149, 30));
 
         starter.setBackground(new java.awt.Color(0, 255, 51));
         starter.setText("Starter");
@@ -902,7 +897,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 starterActionPerformed(evt);
             }
         });
-        jPanel1.add(starter, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 149, 30));
+        inspectionItemPanel.add(starter, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 149, 30));
 
         chargingSystem.setBackground(new java.awt.Color(0, 255, 51));
         chargingSystem.setText("Charging System");
@@ -916,7 +911,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 chargingSystemActionPerformed(evt);
             }
         });
-        jPanel1.add(chargingSystem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 149, 30));
+        inspectionItemPanel.add(chargingSystem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 149, 30));
 
         seatBelts.setBackground(new java.awt.Color(0, 255, 51));
         seatBelts.setText("Seat Belts");
@@ -930,7 +925,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 seatBeltsActionPerformed(evt);
             }
         });
-        jPanel1.add(seatBelts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 149, 30));
+        inspectionItemPanel.add(seatBelts, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 149, 30));
 
         doorLocks.setBackground(new java.awt.Color(0, 255, 51));
         doorLocks.setText("Door Locks");
@@ -944,7 +939,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 doorLocksActionPerformed(evt);
             }
         });
-        jPanel1.add(doorLocks, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 149, 30));
+        inspectionItemPanel.add(doorLocks, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 149, 30));
 
         climateControl.setBackground(new java.awt.Color(0, 255, 51));
         climateControl.setText("Climate Control");
@@ -958,7 +953,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 climateControlActionPerformed(evt);
             }
         });
-        jPanel1.add(climateControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 149, 30));
+        inspectionItemPanel.add(climateControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 149, 30));
 
         instrumentCluster.setBackground(new java.awt.Color(0, 255, 51));
         instrumentCluster.setText("Instrument Cluster");
@@ -972,7 +967,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 instrumentClusterActionPerformed(evt);
             }
         });
-        jPanel1.add(instrumentCluster, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 149, 30));
+        inspectionItemPanel.add(instrumentCluster, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 149, 30));
 
         milLight.setBackground(new java.awt.Color(0, 255, 51));
         milLight.setText("MIL Light");
@@ -986,7 +981,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 milLightActionPerformed(evt);
             }
         });
-        jPanel1.add(milLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 149, 30));
+        inspectionItemPanel.add(milLight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 149, 30));
 
         absBrakeAirbag.setBackground(new java.awt.Color(0, 255, 51));
         absBrakeAirbag.setText("ABS/Brake/Airbag");
@@ -1000,7 +995,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 absBrakeAirbagActionPerformed(evt);
             }
         });
-        jPanel1.add(absBrakeAirbag, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 640, 149, 30));
+        inspectionItemPanel.add(absBrakeAirbag, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 640, 149, 30));
 
         windshield.setBackground(new java.awt.Color(0, 255, 51));
         windshield.setText("Windshield");
@@ -1014,7 +1009,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 windshieldActionPerformed(evt);
             }
         });
-        jPanel1.add(windshield, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 680, 149, 30));
+        inspectionItemPanel.add(windshield, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 680, 149, 30));
 
         Mirrors.setBackground(new java.awt.Color(0, 255, 51));
         Mirrors.setText("Mirrors");
@@ -1028,7 +1023,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 MirrorsActionPerformed(evt);
             }
         });
-        jPanel1.add(Mirrors, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 149, 30));
+        inspectionItemPanel.add(Mirrors, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 720, 149, 30));
 
         powerWindows.setBackground(new java.awt.Color(0, 255, 51));
         powerWindows.setText("Power Windows");
@@ -1042,7 +1037,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 powerWindowsActionPerformed(evt);
             }
         });
-        jPanel1.add(powerWindows, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 149, 30));
+        inspectionItemPanel.add(powerWindows, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 760, 149, 30));
 
         stereo.setBackground(new java.awt.Color(0, 255, 51));
         stereo.setText("Stereo");
@@ -1056,7 +1051,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 stereoActionPerformed(evt);
             }
         });
-        jPanel1.add(stereo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 800, 149, 30));
+        inspectionItemPanel.add(stereo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 800, 149, 30));
 
         doorHandles.setBackground(new java.awt.Color(0, 255, 51));
         doorHandles.setText("Door Handles");
@@ -1070,7 +1065,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 doorHandlesActionPerformed(evt);
             }
         });
-        jPanel1.add(doorHandles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 840, 149, 30));
+        inspectionItemPanel.add(doorHandles, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 840, 149, 30));
 
         horn.setBackground(new java.awt.Color(0, 255, 51));
         horn.setText("Horn");
@@ -1084,7 +1079,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 hornActionPerformed(evt);
             }
         });
-        jPanel1.add(horn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 880, 149, 30));
+        inspectionItemPanel.add(horn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 880, 149, 30));
 
         wipers.setBackground(new java.awt.Color(0, 255, 51));
         wipers.setText("Wipers");
@@ -1098,7 +1093,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 wipersActionPerformed(evt);
             }
         });
-        jPanel1.add(wipers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 920, 149, 30));
+        inspectionItemPanel.add(wipers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 920, 149, 30));
 
         lowBeams.setBackground(new java.awt.Color(0, 255, 51));
         lowBeams.setText("Low Beams");
@@ -1112,7 +1107,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 lowBeamsActionPerformed(evt);
             }
         });
-        jPanel1.add(lowBeams, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 960, 149, 30));
+        inspectionItemPanel.add(lowBeams, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 960, 149, 30));
 
         highBeams.setBackground(new java.awt.Color(0, 255, 51));
         highBeams.setText("High Beams");
@@ -1126,7 +1121,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 highBeamsActionPerformed(evt);
             }
         });
-        jPanel1.add(highBeams, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1000, 149, 30));
+        inspectionItemPanel.add(highBeams, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1000, 149, 30));
 
         fogLights.setBackground(new java.awt.Color(0, 255, 51));
         fogLights.setText("Fog Lights");
@@ -1140,7 +1135,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 fogLightsActionPerformed(evt);
             }
         });
-        jPanel1.add(fogLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1040, 149, 30));
+        inspectionItemPanel.add(fogLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1040, 149, 30));
 
         turnSignalsF.setBackground(new java.awt.Color(0, 255, 51));
         turnSignalsF.setText("Turn Signals (F)");
@@ -1154,7 +1149,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 turnSignalsFActionPerformed(evt);
             }
         });
-        jPanel1.add(turnSignalsF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1080, 149, 30));
+        inspectionItemPanel.add(turnSignalsF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1080, 149, 30));
 
         turnSignalsR.setBackground(new java.awt.Color(0, 255, 51));
         turnSignalsR.setText("Turn Signals (R)");
@@ -1168,7 +1163,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 turnSignalsRActionPerformed(evt);
             }
         });
-        jPanel1.add(turnSignalsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1120, 149, 30));
+        inspectionItemPanel.add(turnSignalsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1120, 149, 30));
 
         runningLights.setBackground(new java.awt.Color(0, 255, 51));
         runningLights.setText("Running Lights");
@@ -1182,7 +1177,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 runningLightsActionPerformed(evt);
             }
         });
-        jPanel1.add(runningLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1160, 149, 30));
+        inspectionItemPanel.add(runningLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1160, 149, 30));
 
         brakeLights.setBackground(new java.awt.Color(0, 255, 51));
         brakeLights.setText("Brake Lights");
@@ -1196,7 +1191,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 brakeLightsActionPerformed(evt);
             }
         });
-        jPanel1.add(brakeLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1200, 149, 30));
+        inspectionItemPanel.add(brakeLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1200, 149, 30));
 
         licensePlateLights.setBackground(new java.awt.Color(0, 255, 51));
         licensePlateLights.setText("License Plate Lights");
@@ -1211,7 +1206,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 licensePlateLightsActionPerformed(evt);
             }
         });
-        jPanel1.add(licensePlateLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1240, 149, 30));
+        inspectionItemPanel.add(licensePlateLights, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1240, 149, 30));
 
         reverse.setBackground(new java.awt.Color(0, 255, 51));
         reverse.setText("Reverse");
@@ -1226,7 +1221,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 reverseActionPerformed(evt);
             }
         });
-        jPanel1.add(reverse, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1280, 149, 30));
+        inspectionItemPanel.add(reverse, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1280, 149, 30));
 
         suspensionComponents.setBackground(new java.awt.Color(0, 255, 51));
         suspensionComponents.setText("Suspension Components");
@@ -1241,7 +1236,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 suspensionComponentsActionPerformed(evt);
             }
         });
-        jPanel1.add(suspensionComponents, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1320, 149, 30));
+        inspectionItemPanel.add(suspensionComponents, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1320, 149, 30));
 
         wheelBearings.setBackground(new java.awt.Color(0, 255, 51));
         wheelBearings.setText("Wheel Bearings");
@@ -1256,7 +1251,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 wheelBearingsActionPerformed(evt);
             }
         });
-        jPanel1.add(wheelBearings, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1360, 149, 30));
+        inspectionItemPanel.add(wheelBearings, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1360, 149, 30));
 
         rotorsAndPadsF.setBackground(new java.awt.Color(0, 255, 51));
         rotorsAndPadsF.setText("Front Rotors & Pads");
@@ -1271,7 +1266,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 rotorsAndPadsFActionPerformed(evt);
             }
         });
-        jPanel1.add(rotorsAndPadsF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1400, 149, 30));
+        inspectionItemPanel.add(rotorsAndPadsF, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1400, 149, 30));
 
         rotorsAndPadsR.setBackground(new java.awt.Color(0, 255, 51));
         rotorsAndPadsR.setText("Rear Rotors & Pads");
@@ -1286,7 +1281,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 rotorsAndPadsRActionPerformed(evt);
             }
         });
-        jPanel1.add(rotorsAndPadsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1440, 149, 30));
+        inspectionItemPanel.add(rotorsAndPadsR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1440, 149, 30));
 
         spareJackTools.setBackground(new java.awt.Color(0, 255, 51));
         spareJackTools.setText("Spare, Jack, & Tools");
@@ -1301,7 +1296,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 spareJackToolsActionPerformed(evt);
             }
         });
-        jPanel1.add(spareJackTools, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1480, 149, 30));
+        inspectionItemPanel.add(spareJackTools, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1480, 149, 30));
 
         exhaustSystem.setBackground(new java.awt.Color(0, 255, 51));
         exhaustSystem.setText("Exhaust System");
@@ -1316,7 +1311,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 exhaustSystemActionPerformed(evt);
             }
         });
-        jPanel1.add(exhaustSystem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1520, 149, 30));
+        inspectionItemPanel.add(exhaustSystem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1520, 149, 30));
 
         cvJointsAxlesSeals.setBackground(new java.awt.Color(0, 255, 51));
         cvJointsAxlesSeals.setText("CV Joints, Axles, Seals");
@@ -1331,7 +1326,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 cvJointsAxlesSealsActionPerformed(evt);
             }
         });
-        jPanel1.add(cvJointsAxlesSeals, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1560, 149, 30));
+        inspectionItemPanel.add(cvJointsAxlesSeals, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1560, 149, 30));
 
         brakeFluidText.setToolTipText("Brake Fluid Condition");
         brakeFluidText.setBorder(null);
@@ -1343,7 +1338,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 brakeFluidTextActionPerformed(evt);
             }
         });
-        jPanel1.add(brakeFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 11, 349, 30));
+        inspectionItemPanel.add(brakeFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 11, 349, 30));
 
         coolantText.setToolTipText("Brake Fluid Condition");
         coolantText.setBorder(null);
@@ -1355,7 +1350,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 coolantTextActionPerformed(evt);
             }
         });
-        jPanel1.add(coolantText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 47, 349, 30));
+        inspectionItemPanel.add(coolantText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 47, 349, 30));
 
         beltsText.setToolTipText("Brake Fluid Condition");
         beltsText.setBorder(null);
@@ -1367,7 +1362,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 beltsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(beltsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 83, 349, 30));
+        inspectionItemPanel.add(beltsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 83, 349, 30));
 
         cvJointsAxlesSealsText.setToolTipText("Brake Fluid Condition");
         cvJointsAxlesSealsText.setBorder(null);
@@ -1379,7 +1374,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 cvJointsAxlesSealsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(cvJointsAxlesSealsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1560, 349, 30));
+        inspectionItemPanel.add(cvJointsAxlesSealsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1560, 349, 30));
 
         airFilterText.setToolTipText("Brake Fluid Condition");
         airFilterText.setBorder(null);
@@ -1391,7 +1386,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 airFilterTextActionPerformed(evt);
             }
         });
-        jPanel1.add(airFilterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 349, 30));
+        inspectionItemPanel.add(airFilterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 349, 30));
 
         oilConditionText.setToolTipText("Brake Fluid Condition");
         oilConditionText.setBorder(null);
@@ -1403,7 +1398,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 oilConditionTextActionPerformed(evt);
             }
         });
-        jPanel1.add(oilConditionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 349, 30));
+        inspectionItemPanel.add(oilConditionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 349, 30));
 
         transmissionFluidText.setToolTipText("Brake Fluid Condition");
         transmissionFluidText.setBorder(null);
@@ -1415,7 +1410,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 transmissionFluidTextActionPerformed(evt);
             }
         });
-        jPanel1.add(transmissionFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 349, 30));
+        inspectionItemPanel.add(transmissionFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 349, 30));
 
         batteryConditionText.setToolTipText("Brake Fluid Condition");
         batteryConditionText.setBorder(null);
@@ -1427,7 +1422,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 batteryConditionTextActionPerformed(evt);
             }
         });
-        jPanel1.add(batteryConditionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 349, 30));
+        inspectionItemPanel.add(batteryConditionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 349, 30));
 
         washerFluidText.setToolTipText("Brake Fluid Condition");
         washerFluidText.setBorder(null);
@@ -1439,7 +1434,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 washerFluidTextActionPerformed(evt);
             }
         });
-        jPanel1.add(washerFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 349, 30));
+        inspectionItemPanel.add(washerFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 349, 30));
 
         motorMountsText.setToolTipText("Brake Fluid Condition");
         motorMountsText.setBorder(null);
@@ -1451,7 +1446,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 motorMountsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(motorMountsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 349, 30));
+        inspectionItemPanel.add(motorMountsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 349, 30));
 
         starterText.setToolTipText("Brake Fluid Condition");
         starterText.setBorder(null);
@@ -1463,7 +1458,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 starterTextActionPerformed(evt);
             }
         });
-        jPanel1.add(starterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 349, 30));
+        inspectionItemPanel.add(starterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 349, 30));
 
         chargingSystemText.setToolTipText("Brake Fluid Condition");
         chargingSystemText.setBorder(null);
@@ -1475,7 +1470,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 chargingSystemTextActionPerformed(evt);
             }
         });
-        jPanel1.add(chargingSystemText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 349, 30));
+        inspectionItemPanel.add(chargingSystemText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 349, 30));
 
         seatBeltsText.setToolTipText("Brake Fluid Condition");
         seatBeltsText.setBorder(null);
@@ -1487,7 +1482,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 seatBeltsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(seatBeltsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 349, 30));
+        inspectionItemPanel.add(seatBeltsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 349, 30));
 
         doorLocksText.setToolTipText("Brake Fluid Condition");
         doorLocksText.setBorder(null);
@@ -1499,7 +1494,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 doorLocksTextActionPerformed(evt);
             }
         });
-        jPanel1.add(doorLocksText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 349, 30));
+        inspectionItemPanel.add(doorLocksText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 349, 30));
 
         climateControlText.setToolTipText("Brake Fluid Condition");
         climateControlText.setBorder(null);
@@ -1511,7 +1506,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 climateControlTextActionPerformed(evt);
             }
         });
-        jPanel1.add(climateControlText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 349, 30));
+        inspectionItemPanel.add(climateControlText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 349, 30));
 
         instrumentClusterText.setToolTipText("Brake Fluid Condition");
         instrumentClusterText.setBorder(null);
@@ -1523,7 +1518,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 instrumentClusterTextActionPerformed(evt);
             }
         });
-        jPanel1.add(instrumentClusterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 349, 30));
+        inspectionItemPanel.add(instrumentClusterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 349, 30));
 
         milLightText.setToolTipText("Brake Fluid Condition");
         milLightText.setBorder(null);
@@ -1535,7 +1530,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 milLightTextActionPerformed(evt);
             }
         });
-        jPanel1.add(milLightText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 600, 349, 30));
+        inspectionItemPanel.add(milLightText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 600, 349, 30));
 
         absBrakeAirbagText.setToolTipText("Brake Fluid Condition");
         absBrakeAirbagText.setBorder(null);
@@ -1547,7 +1542,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 absBrakeAirbagTextActionPerformed(evt);
             }
         });
-        jPanel1.add(absBrakeAirbagText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 640, 349, 30));
+        inspectionItemPanel.add(absBrakeAirbagText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 640, 349, 30));
 
         windshieldText.setToolTipText("Brake Fluid Condition");
         windshieldText.setBorder(null);
@@ -1559,7 +1554,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 windshieldTextActionPerformed(evt);
             }
         });
-        jPanel1.add(windshieldText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 680, 349, 30));
+        inspectionItemPanel.add(windshieldText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 680, 349, 30));
 
         mirrorsText.setToolTipText("Brake Fluid Condition");
         mirrorsText.setBorder(null);
@@ -1571,7 +1566,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 mirrorsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(mirrorsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 720, 349, 30));
+        inspectionItemPanel.add(mirrorsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 720, 349, 30));
 
         powerWindowsText.setToolTipText("Brake Fluid Condition");
         powerWindowsText.setBorder(null);
@@ -1583,7 +1578,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 powerWindowsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(powerWindowsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 760, 349, 30));
+        inspectionItemPanel.add(powerWindowsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 760, 349, 30));
 
         stereoText.setToolTipText("Brake Fluid Condition");
         stereoText.setBorder(null);
@@ -1595,7 +1590,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 stereoTextActionPerformed(evt);
             }
         });
-        jPanel1.add(stereoText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 800, 349, 30));
+        inspectionItemPanel.add(stereoText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 800, 349, 30));
 
         doorHandlesText.setToolTipText("Brake Fluid Condition");
         doorHandlesText.setBorder(null);
@@ -1607,7 +1602,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 doorHandlesTextActionPerformed(evt);
             }
         });
-        jPanel1.add(doorHandlesText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 840, 349, 30));
+        inspectionItemPanel.add(doorHandlesText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 840, 349, 30));
 
         hornText.setToolTipText("Brake Fluid Condition");
         hornText.setBorder(null);
@@ -1619,7 +1614,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 hornTextActionPerformed(evt);
             }
         });
-        jPanel1.add(hornText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 880, 349, 30));
+        inspectionItemPanel.add(hornText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 880, 349, 30));
 
         wipersText.setToolTipText("Brake Fluid Condition");
         wipersText.setBorder(null);
@@ -1631,7 +1626,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 wipersTextActionPerformed(evt);
             }
         });
-        jPanel1.add(wipersText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 920, 349, 30));
+        inspectionItemPanel.add(wipersText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 920, 349, 30));
 
         lowBeamsText.setToolTipText("Brake Fluid Condition");
         lowBeamsText.setBorder(null);
@@ -1643,7 +1638,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 lowBeamsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(lowBeamsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 960, 349, 30));
+        inspectionItemPanel.add(lowBeamsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 960, 349, 30));
 
         highBeamsText.setToolTipText("Brake Fluid Condition");
         highBeamsText.setBorder(null);
@@ -1655,7 +1650,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 highBeamsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(highBeamsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1000, 349, 30));
+        inspectionItemPanel.add(highBeamsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1000, 349, 30));
 
         fogLightsText.setToolTipText("Brake Fluid Condition");
         fogLightsText.setBorder(null);
@@ -1667,7 +1662,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 fogLightsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(fogLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1040, 349, 30));
+        inspectionItemPanel.add(fogLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1040, 349, 30));
 
         turnSignalsFText.setToolTipText("Brake Fluid Condition");
         turnSignalsFText.setBorder(null);
@@ -1679,7 +1674,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 turnSignalsFTextActionPerformed(evt);
             }
         });
-        jPanel1.add(turnSignalsFText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1080, 349, 30));
+        inspectionItemPanel.add(turnSignalsFText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1080, 349, 30));
 
         turnSignalsRText.setToolTipText("Brake Fluid Condition");
         turnSignalsRText.setBorder(null);
@@ -1691,7 +1686,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 turnSignalsRTextActionPerformed(evt);
             }
         });
-        jPanel1.add(turnSignalsRText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1120, 349, 30));
+        inspectionItemPanel.add(turnSignalsRText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1120, 349, 30));
 
         runningLightsText.setToolTipText("Brake Fluid Condition");
         runningLightsText.setBorder(null);
@@ -1703,7 +1698,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 runningLightsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(runningLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1160, 349, 30));
+        inspectionItemPanel.add(runningLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1160, 349, 30));
 
         brakeLightsText.setToolTipText("Brake Fluid Condition");
         brakeLightsText.setBorder(null);
@@ -1715,7 +1710,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 brakeLightsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(brakeLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1200, 349, 30));
+        inspectionItemPanel.add(brakeLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1200, 349, 30));
 
         licensePlateLightsText.setToolTipText("Brake Fluid Condition");
         licensePlateLightsText.setBorder(null);
@@ -1727,7 +1722,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 licensePlateLightsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(licensePlateLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1240, 349, 30));
+        inspectionItemPanel.add(licensePlateLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1240, 349, 30));
 
         reverseText.setToolTipText("Brake Fluid Condition");
         reverseText.setBorder(null);
@@ -1739,7 +1734,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 reverseTextActionPerformed(evt);
             }
         });
-        jPanel1.add(reverseText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1280, 349, 30));
+        inspectionItemPanel.add(reverseText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1280, 349, 30));
 
         suspensionComponentsText.setToolTipText("Brake Fluid Condition");
         suspensionComponentsText.setBorder(null);
@@ -1751,7 +1746,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 suspensionComponentsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(suspensionComponentsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1320, 349, 30));
+        inspectionItemPanel.add(suspensionComponentsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1320, 349, 30));
 
         wheelBearingsText.setToolTipText("Brake Fluid Condition");
         wheelBearingsText.setBorder(null);
@@ -1763,7 +1758,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 wheelBearingsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(wheelBearingsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1360, 349, 30));
+        inspectionItemPanel.add(wheelBearingsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1360, 349, 30));
 
         rotorsAndPadsFText.setToolTipText("Brake Fluid Condition");
         rotorsAndPadsFText.setBorder(null);
@@ -1775,7 +1770,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 rotorsAndPadsFTextActionPerformed(evt);
             }
         });
-        jPanel1.add(rotorsAndPadsFText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1400, 349, 30));
+        inspectionItemPanel.add(rotorsAndPadsFText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1400, 349, 30));
 
         rotorsAndPadsRText.setToolTipText("Brake Fluid Condition");
         rotorsAndPadsRText.setBorder(null);
@@ -1787,7 +1782,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 rotorsAndPadsRTextActionPerformed(evt);
             }
         });
-        jPanel1.add(rotorsAndPadsRText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1440, 349, 30));
+        inspectionItemPanel.add(rotorsAndPadsRText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1440, 349, 30));
 
         spareJackToolsText.setToolTipText("Brake Fluid Condition");
         spareJackToolsText.setBorder(null);
@@ -1799,7 +1794,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 spareJackToolsTextActionPerformed(evt);
             }
         });
-        jPanel1.add(spareJackToolsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1480, 349, 30));
+        inspectionItemPanel.add(spareJackToolsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1480, 349, 30));
 
         exhaustSystemText.setToolTipText("Brake Fluid Condition");
         exhaustSystemText.setBorder(null);
@@ -1811,9 +1806,9 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 exhaustSystemTextActionPerformed(evt);
             }
         });
-        jPanel1.add(exhaustSystemText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1520, 349, 30));
+        inspectionItemPanel.add(exhaustSystemText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1520, 349, 30));
 
-        InspectionScrollPanel.setViewportView(jPanel1);
+        InspectionScrollPanel.setViewportView(inspectionItemPanel);
 
         TirePanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, null, new java.awt.Color(204, 255, 204), null, null));
 
@@ -2294,8 +2289,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (belts.isSelected()) {
             beltsText.setVisible(true);
             beltsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             beltsText.setVisible(false);
             beltsText.setBorder(null);
@@ -2320,8 +2315,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (coolant.isSelected()) {
             coolantText.setVisible(true);
             coolantText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             coolantText.setVisible(false);
             coolantText.setBorder(null);
@@ -2357,8 +2352,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (oilCondition.isSelected()) {
             oilConditionText.setVisible(true);
             oilConditionText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             oilConditionText.setVisible(false);
             oilConditionText.setBorder(null);
@@ -2370,8 +2365,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (transmissionFluid.isSelected()) {
             transmissionFluidText.setVisible(true);
             transmissionFluidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             transmissionFluidText.setVisible(false);
             transmissionFluidText.setBorder(null);
@@ -2383,8 +2378,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (batteryCondition.isSelected()) {
             batteryConditionText.setVisible(true);
             batteryConditionText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             batteryConditionText.setVisible(false);
             batteryConditionText.setBorder(null);
@@ -2396,8 +2391,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (washerFluid.isSelected()) {
             washerFluidText.setVisible(true);
             washerFluidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             washerFluidText.setVisible(false);
             washerFluidText.setBorder(null);
@@ -2409,8 +2404,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (motormounts.isSelected()) {
             motorMountsText.setVisible(true);
             motorMountsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             motorMountsText.setVisible(false);
             motorMountsText.setBorder(null);
@@ -2422,8 +2417,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (starter.isSelected()) {
             starterText.setVisible(true);
             starterText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             starterText.setVisible(false);
             starterText.setBorder(null);
@@ -2435,8 +2430,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (chargingSystem.isSelected()) {
             chargingSystemText.setVisible(true);
             chargingSystemText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             chargingSystemText.setVisible(false);
             chargingSystemText.setBorder(null);
@@ -2448,8 +2443,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (seatBelts.isSelected()) {
             seatBeltsText.setVisible(true);
             seatBeltsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             seatBeltsText.setVisible(false);
             seatBeltsText.setBorder(null);
@@ -2461,8 +2456,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (doorLocks.isSelected()) {
             doorLocksText.setVisible(true);
             doorLocksText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             doorLocksText.setVisible(false);
             doorLocksText.setBorder(null);
@@ -2474,8 +2469,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (climateControl.isSelected()) {
             climateControlText.setVisible(true);
             climateControlText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             climateControlText.setVisible(false);
             climateControlText.setBorder(null);
@@ -2487,8 +2482,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (instrumentCluster.isSelected()) {
             instrumentClusterText.setVisible(true);
             instrumentClusterText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             instrumentClusterText.setVisible(false);
             instrumentClusterText.setBorder(null);
@@ -2500,8 +2495,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (milLight.isSelected()) {
             milLightText.setVisible(true);
             milLightText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             milLightText.setVisible(false);
             milLightText.setBorder(null);
@@ -2513,8 +2508,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (absBrakeAirbag.isSelected()) {
             absBrakeAirbagText.setVisible(true);
             absBrakeAirbagText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             absBrakeAirbagText.setVisible(false);
             absBrakeAirbagText.setBorder(null);
@@ -2526,8 +2521,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (windshield.isSelected()) {
             windshieldText.setVisible(true);
             windshieldText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             windshieldText.setVisible(false);
             windshieldText.setBorder(null);
@@ -2539,8 +2534,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (Mirrors.isSelected()) {
             mirrorsText.setVisible(true);
             mirrorsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             mirrorsText.setVisible(false);
             mirrorsText.setBorder(null);
@@ -2552,8 +2547,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (powerWindows.isSelected()) {
             powerWindowsText.setVisible(true);
             powerWindowsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             powerWindowsText.setVisible(false);
             powerWindowsText.setBorder(null);
@@ -2565,8 +2560,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (stereo.isSelected()) {
             stereoText.setVisible(true);
             stereoText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             stereoText.setVisible(false);
             stereoText.setBorder(null);
@@ -2578,8 +2573,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (doorHandles.isSelected()) {
             doorHandlesText.setVisible(true);
             doorHandlesText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             doorHandlesText.setVisible(false);
             doorHandlesText.setBorder(null);
@@ -2591,8 +2586,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (horn.isSelected()) {
             hornText.setVisible(true);
             hornText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             hornText.setVisible(false);
             hornText.setBorder(null);
@@ -2604,8 +2599,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (wipers.isSelected()) {
             wipersText.setVisible(true);
             wipersText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             wipersText.setVisible(false);
             wipersText.setBorder(null);
@@ -2617,8 +2612,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (lowBeams.isSelected()) {
             lowBeamsText.setVisible(true);
             lowBeamsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             lowBeamsText.setVisible(false);
             lowBeamsText.setBorder(null);
@@ -2630,8 +2625,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (highBeams.isSelected()) {
             highBeamsText.setVisible(true);
             highBeamsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             highBeamsText.setVisible(false);
             highBeamsText.setBorder(null);
@@ -2643,8 +2638,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (fogLights.isSelected()) {
             fogLightsText.setVisible(true);
             fogLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             fogLightsText.setVisible(false);
             fogLightsText.setBorder(null);
@@ -2656,8 +2651,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (turnSignalsF.isSelected()) {
             turnSignalsFText.setVisible(true);
             turnSignalsFText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             turnSignalsFText.setVisible(false);
             turnSignalsFText.setBorder(null);
@@ -2669,8 +2664,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (turnSignalsR.isSelected()) {
             turnSignalsRText.setVisible(true);
             turnSignalsRText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             turnSignalsRText.setVisible(false);
             turnSignalsRText.setBorder(null);
@@ -2682,8 +2677,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (runningLights.isSelected()) {
             runningLightsText.setVisible(true);
             runningLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             runningLightsText.setVisible(false);
             runningLightsText.setBorder(null);
@@ -2695,8 +2690,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (brakeLights.isSelected()) {
             brakeLightsText.setVisible(true);
             brakeLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             brakeLightsText.setVisible(false);
             brakeLightsText.setBorder(null);
@@ -2708,8 +2703,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (licensePlateLights.isSelected()) {
             licensePlateLightsText.setVisible(true);
             licensePlateLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             licensePlateLightsText.setVisible(false);
             licensePlateLightsText.setBorder(null);
@@ -2721,8 +2716,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (reverse.isSelected()) {
             reverseText.setVisible(true);
             reverseText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             reverseText.setVisible(false);
             reverseText.setBorder(null);
@@ -2734,8 +2729,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (suspensionComponents.isSelected()) {
             suspensionComponentsText.setVisible(true);
             suspensionComponentsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             suspensionComponentsText.setVisible(false);
             suspensionComponentsText.setBorder(null);
@@ -2747,8 +2742,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (wheelBearings.isSelected()) {
             wheelBearingsText.setVisible(true);
             wheelBearingsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             wheelBearingsText.setVisible(false);
             wheelBearingsText.setBorder(null);
@@ -2760,8 +2755,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (rotorsAndPadsF.isSelected()) {
             rotorsAndPadsFText.setVisible(true);
             rotorsAndPadsFText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             rotorsAndPadsFText.setVisible(false);
             rotorsAndPadsFText.setBorder(null);
@@ -2773,8 +2768,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (rotorsAndPadsR.isSelected()) {
             rotorsAndPadsRText.setVisible(true);
             rotorsAndPadsRText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             rotorsAndPadsRText.setVisible(false);
             rotorsAndPadsRText.setBorder(null);
@@ -2786,8 +2781,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (spareJackTools.isSelected()) {
             spareJackToolsText.setVisible(true);
             spareJackToolsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             spareJackToolsText.setVisible(false);
             spareJackToolsText.setBorder(null);
@@ -2799,8 +2794,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (exhaustSystem.isSelected()) {
             exhaustSystemText.setVisible(true);
             exhaustSystemText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             exhaustSystemText.setVisible(false);
             exhaustSystemText.setBorder(null);
@@ -2812,8 +2807,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (cvJointsAxlesSeals.isSelected()) {
             cvJointsAxlesSealsText.setVisible(true);
             cvJointsAxlesSealsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             cvJointsAxlesSealsText.setVisible(false);
             cvJointsAxlesSealsText.setBorder(null);
@@ -2825,8 +2820,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (brakeFluid.isSelected()) {
             brakeFluidText.setVisible(true);
             brakeFluidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             brakeFluidText.setVisible(false);
             brakeFluidText.setBorder(null);
@@ -2851,8 +2846,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         if (airFilter.isSelected()) {
             airFilterText.setVisible(true);
             airFilterText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            jPanel1.revalidate();
-            jPanel1.repaint();
+            inspectionItemPanel.revalidate();
+            inspectionItemPanel.repaint();
         } else {
             airFilterText.setVisible(false);
             airFilterText.setBorder(null);
@@ -3576,37 +3571,22 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }
     private void ClearFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearFormActionPerformed
         clearTextFields(this.getContentPane());
-        clearSelectedButtons(this.jPanel1);
+        clearSelectedButtons(this.inspectionItemPanel);
         clearSelectedButtons(this.TirePanel);
         clearSelectedButtons(this.TireDepthPanel);
     }//GEN-LAST:event_ClearFormActionPerformed
-
-    private void SaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveItemActionPerformed
     
-    File selFile = null;
-        try {
-            selFile = new File(yearText.getText() + " "+ MakeComboBox.getSelectedItem() + " " + ModelComboBox.getSelectedItem() + " " + vinText.getText(13,4).toUpperCase() + ".txt");
-        } catch (BadLocationException ex) {
-            JOptionPane.showMessageDialog(new javax.swing.JWindow(), "Please enter a valid 17 digit VIN number.");
-            return;
-        }
-    SaveFileChooser.setSelectedFile(selFile);
-    int returnval = SaveFileChooser.showSaveDialog(this);
-    if (returnval == JFileChooser.APPROVE_OPTION) {
-  
-      File file = SaveFileChooser.getSelectedFile();
-      try{
-    boolean isFile = false;
-        if(!file.exists())
-        isFile = file.createNewFile();
-       
- 
-    FileWriter outFile = new FileWriter(file);
-      } catch (IOException ex) {
-            Logger.getLogger(InspectionFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-     
-} 
+    private void SaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveItemActionPerformed
+        savefileDAO = DAOFactory.getSaveFileDAO();
+        int ArraySize = savefileDAO.getComponentSize(InfoPanel);
+        String [] component1 = savefileDAO.getComponenets(InfoPanel,ArraySize);
+        savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component1);
+        ArraySize = savefileDAO.getComponentSize(TireDepthPanel);
+        String [] component2 = savefileDAO.getComponenets(TireDepthPanel, ArraySize);
+        savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component2);
+        ArraySize = savefileDAO.getComponentSize(inspectionItemPanel);
+        String [] component3 = savefileDAO.getComponenets(inspectionItemPanel, ArraySize);
+        savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component3);
     }//GEN-LAST:event_SaveItemActionPerformed
 
     private void AboutItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutItemActionPerformed
@@ -3657,7 +3637,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }    
     private void SavedFileListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SavedFileListMouseClicked
     String selection = SavedFileList.getSelectedValue() + ".txt";
-    int numOfLines = saveInspectDAO.LineNumber(selection);
+    int numOfLines = saveInspectDAO.GetLineNumber(selection);
     String [] readFileValues = saveInspectDAO.setSavedInspections(numOfLines, selection);
     for (int i = 0; i < readFileValues.length; i++) {
             if (readFileValues[i] != null) {
@@ -3811,6 +3791,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     javax.swing.JTextField highBeamsText;
     javax.swing.JToggleButton horn;
     javax.swing.JTextField hornText;
+    javax.swing.JPanel inspectionItemPanel;
     javax.swing.JToggleButton instrumentCluster;
     javax.swing.JTextField instrumentClusterText;
     javax.swing.JLabel jLabel1;
@@ -3838,7 +3819,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
     javax.swing.JLabel jLabel7;
     javax.swing.JLabel jLabel8;
     javax.swing.JLabel jLabel9;
-    javax.swing.JPanel jPanel1;
     javax.swing.JScrollPane jScrollPane1;
     javax.swing.JTextPane jTextPane1;
     javax.swing.JTextPane jTextPane2;

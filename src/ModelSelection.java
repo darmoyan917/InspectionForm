@@ -23,12 +23,12 @@ public final class ModelSelection implements ModelDAO {
     }
     
     public String[] SetModelCombo(){
-        int NumOfLines = LineNumber();
+        int NumOfLines = GetLineNumber();
         String[] ModelCombo = GetModelCombo(NumOfLines);
         return ModelCombo;
     }
     
-    public int LineNumber(){
+    public int GetLineNumber(){
         int NumOfLines=0;
         if (Files.exists(ModelFilePath)){
             try(LineNumberReader  lnr = new LineNumberReader(new FileReader(ModelFile))){

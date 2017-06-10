@@ -1319,12 +1319,12 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="inspectionItemPanel">
           <Properties>
             <Property name="autoscrolls" type="boolean" value="true"/>
           </Properties>
           <BindingProperties>
-            <BindingProperty name="enabled" source="brakeFluid" sourcePath="${selected}" target="jPanel1" targetPath="enabled" updateStrategy="0" immediately="false"/>
+            <BindingProperty name="enabled" source="brakeFluid" sourcePath="${selected}" target="inspectionItemPanel" targetPath="enabled" updateStrategy="0" immediately="false"/>
           </BindingProperties>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">

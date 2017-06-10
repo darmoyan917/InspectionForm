@@ -26,11 +26,11 @@ public class SavedInspections implements SavedInspectionsDAO{
     public String [] setSavedInspections(int NumOfLines, String selection){
         String [] SavedInspections = new String[NumOfLines];
         Path toInspectionpath = Paths.get("Inspections\\" + selection);
-        File toInspectFile = toInspectionpath.toFile();
+        SavedFile = toInspectionpath.toFile();
         if (Files.exists(toInspectionpath))
             { try (BufferedReader in = 
                      new BufferedReader(
-                     new FileReader(toInspectFile)))
+                     new FileReader(SavedFile)))
             {
                 int i = 0;
                 String line = in.readLine();
@@ -51,12 +51,12 @@ public class SavedInspections implements SavedInspectionsDAO{
     return SavedInspections;
     }
     
-    public int LineNumber(String selection){
+    public int GetLineNumber(String selection){
         int NumOfLines=0;
         Path toInspectionpath = Paths.get("Inspections\\" + selection);
-        File toInspectFile = toInspectionpath.toFile();
+        SavedFile = toInspectionpath.toFile();
         if (Files.exists(toInspectionpath)){
-            try(LineNumberReader  lnr = new LineNumberReader(new FileReader(toInspectFile))){
+            try(LineNumberReader  lnr = new LineNumberReader(new FileReader(SavedFile))){
     
                 lnr.skip(Long.MAX_VALUE);
                 NumOfLines = (lnr.getLineNumber() + 1);
