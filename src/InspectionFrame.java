@@ -10,6 +10,7 @@ import java.io.File;
 import java.util.Locale;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
@@ -2135,7 +2136,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             .addGroup(FilePickerPanelLayout.createSequentialGroup()
                 .addComponent(SavedInspectionsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SavedFileListPane, javax.swing.GroupLayout.PREFERRED_SIZE, 998, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(SavedFileListPane))
         );
 
         MainMenuBar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -2250,33 +2251,27 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1026, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(InfoPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(TirePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(33, 33, 33)
-                            .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(27, Short.MAX_VALUE))
+                    .addComponent(InfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(TirePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(FilePickerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(FilePickerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(InfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(TirePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 1053, Short.MAX_VALUE))
-                            .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1607, Short.MAX_VALUE))))
-                .addContainerGap())
+                            .addComponent(TirePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 753, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 75, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
@@ -3579,14 +3574,16 @@ final class InspectionFrame extends javax.swing.JFrame  {
     private void SaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveItemActionPerformed
         savefileDAO = DAOFactory.getSaveFileDAO();
         int ArraySize = savefileDAO.getComponentSize(InfoPanel);
-        String [] component1 = savefileDAO.getComponenets(InfoPanel,ArraySize);
-        savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component1);
+        String [] component1 = savefileDAO.getComponenets(InfoPanel,ArraySize , 0);
+        int save = savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component1);
+        if(save == JFileChooser.APPROVE_OPTION){
         ArraySize = savefileDAO.getComponentSize(TireDepthPanel);
-        String [] component2 = savefileDAO.getComponenets(TireDepthPanel, ArraySize);
-        savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component2);
+        String [] component2 = savefileDAO.getComponenets(TireDepthPanel, ArraySize,0);
+        savefileDAO.setComponentsToFile(component2, SaveFileChooser);
         ArraySize = savefileDAO.getComponentSize(inspectionItemPanel);
-        String [] component3 = savefileDAO.getComponenets(inspectionItemPanel, ArraySize);
-        savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component3);
+        String [] component3 = savefileDAO.getComponenets(inspectionItemPanel, ArraySize,0);
+        savefileDAO.setComponentsToFile(component3, SaveFileChooser);
+        }
     }//GEN-LAST:event_SaveItemActionPerformed
 
     private void AboutItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AboutItemActionPerformed
@@ -3595,6 +3592,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
     private void MakeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MakeComboBoxActionPerformed
         int MakeIndex = MakeComboBox.getSelectedIndex();
+        if(MakeIndex > 0){
         String SelectedMake = MakeComboBox.getItemAt(MakeIndex).toString();
         modelDAO = DAOFactory.getModelDAO(SelectedMake);
         String[] ModelCombo = modelDAO.SetModelCombo();
@@ -3604,6 +3602,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 String Combo = ModelCombo[i];
                 ModelComboBox.addItem(Combo);
             }
+        }
         }
     }//GEN-LAST:event_MakeComboBoxActionPerformed
 

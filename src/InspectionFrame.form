@@ -1247,16 +1247,13 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="titleLabel" alignment="0" min="-2" pref="1026" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="InfoPanel" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="TirePanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="InspectionScrollPanel" min="-2" pref="658" max="-2" attributes="0"/>
-                      </Group>
+                  <Component id="InfoPanel" alignment="0" min="-2" pref="1020" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="TirePanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="InspectionScrollPanel" min="-2" pref="629" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="27" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1264,26 +1261,20 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="FilePickerPanel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="FilePickerPanel" pref="996" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="titleLabel" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="InfoPanel" min="-2" pref="181" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="TirePanel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="1053" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="InspectionScrollPanel" pref="1607" max="32767" attributes="0"/>
+                          <Component id="TirePanel" min="-2" max="-2" attributes="0"/>
+                          <Component id="InspectionScrollPanel" min="-2" pref="753" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -3566,7 +3557,7 @@
               <Group type="102" attributes="0">
                   <Component id="SavedInspectionsLabel" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="SavedFileListPane" min="-2" pref="998" max="-2" attributes="0"/>
+                  <Component id="SavedFileListPane" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
