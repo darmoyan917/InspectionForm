@@ -7,7 +7,8 @@ import javax.swing.JTextField;
 
 
 public interface saveFileDAO {
-     String[] getComponenets(Container container, int arraySize);
+     String[] getComponenets(Container container, int arraySize, int i);
      int getComponentSize(Container container);
-     void setComponentsToNewFile(JTextField yearText, JComboBox MakeComboBox, JComboBox ModelComboBox, JTextField vinText, JFileChooser SaveFileChooser, JFrame frame, String[] ReadField);
+     int setComponentsToNewFile(JTextField yearText, JComboBox MakeComboBox, JComboBox ModelComboBox, JTextField vinText, JFileChooser SaveFileChooser, JFrame frame, String[] ReadField);
+     void setComponentsToFile( String[] ReadField, JFileChooser SaveFileChooser);
 }
