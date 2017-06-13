@@ -31,5 +31,10 @@ public class DAOFactory
         saveFileDAO saveFile = new saveFile();
         return saveFile;
     }
+    public static openFileDAO getOpenFileDAO()
+    {
+        openFileDAO openFile = new openFile();
+        return openFile;
+    }
    
 }

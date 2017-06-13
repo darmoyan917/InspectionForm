@@ -7,6 +7,8 @@ import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Locale;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
@@ -24,6 +26,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     private static PrinterInterface printerint = null;
     private static SavedInspectionsDAO saveInspectDAO = null;
     private static saveFileDAO savefileDAO = null;
+    private static openFileDAO openfileDAO = null;
     public InspectionFrame() {
         initComponents();
         
@@ -309,11 +312,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         OpenFileChooser.setPreferredSize(new java.awt.Dimension(582, 487));
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES", "txt", "text");
         OpenFileChooser.setFileFilter(filter);
-        OpenFileChooser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OpenFileChooserActionPerformed(evt);
-            }
-        });
 
         PrintFrame.setBackground(new java.awt.Color(255, 255, 255));
         PrintFrame.setForeground(java.awt.Color.white);
@@ -3564,6 +3562,22 @@ final class InspectionFrame extends javax.swing.JFrame  {
             }
         }
     }
+    public void OpenFileInitializer(){
+        openfileDAO = DAOFactory.getOpenFileDAO();
+        int returnvalue = OpenFileChooser.showOpenDialog(this);
+        if(returnvalue == JFileChooser.APPROVE_OPTION){
+            File Openfile = OpenFileChooser.getSelectedFile();
+            int numoflines = openfileDAO.LineNumber(Openfile);
+            String[] readFile = openfileDAO.openFile(Openfile, numoflines);
+            openfileDAO.setComponenets(this,readFile, 0);
+        }
+    }
+    public void OpenFileInitializer(File Openfile){
+            openfileDAO = DAOFactory.getOpenFileDAO();
+            int numoflines = openfileDAO.LineNumber(Openfile);
+            String[] readFile = openfileDAO.openFile(Openfile, numoflines);
+            openfileDAO.setComponenets(this,readFile, 0);
+    }
     private void ClearFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearFormActionPerformed
         clearTextFields(this.getContentPane());
         clearSelectedButtons(this.inspectionItemPanel);
@@ -3607,14 +3621,9 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }//GEN-LAST:event_MakeComboBoxActionPerformed
 
     private void OpenItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenItemActionPerformed
-        OpenFileChooser.showOpenDialog(this);
+        OpenFileInitializer();
     }//GEN-LAST:event_OpenItemActionPerformed
     
-    private void OpenFileChooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpenFileChooserActionPerformed
-        File Openfile = OpenFileChooser.getSelectedFile();
-        
-    }//GEN-LAST:event_OpenFileChooserActionPerformed
-
     private void CloseItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseItemActionPerformed
         System.exit(0);
     }//GEN-LAST:event_CloseItemActionPerformed
@@ -3635,16 +3644,12 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }//GEN-LAST:event_SaveSetupActionPerformed
     }    
     private void SavedFileListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SavedFileListMouseClicked
-    String selection = SavedFileList.getSelectedValue() + ".txt";
-    int numOfLines = saveInspectDAO.GetLineNumber(selection);
-    String [] readFileValues = saveInspectDAO.setSavedInspections(numOfLines, selection);
-    for (int i = 0; i < readFileValues.length; i++) {
-            if (readFileValues[i] != null) {
-                System.out.println(readFileValues[i]);
-            }
+    String selection = "Inspections\\" + SavedFileList.getSelectedValue() + ".txt";
+    Path filePath = Paths.get(selection);
+    File file = filePath.toAbsolutePath().toFile();
+    OpenFileInitializer(file);
     }//GEN-LAST:event_SavedFileListMouseClicked
-    }
-    
+
     private void SavedInspectionsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SavedInspectionsLabelMouseClicked
         DefaultListModel saveList = new DefaultListModel();
         saveInspectDAO = DAOFactory.getInspectionsDAO();

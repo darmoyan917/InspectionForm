@@ -107,9 +107,6 @@
           <Dimension value="[582, 487]"/>
         </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OpenFileChooserActionPerformed"/>
-      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JFileChooser()"/>
         <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="FileNameExtensionFilter filter = new FileNameExtensionFilter(&quot;TEXT FILES&quot;, &quot;txt&quot;, &quot;text&quot;);&#xa;OpenFileChooser.setFileFilter(filter);"/>

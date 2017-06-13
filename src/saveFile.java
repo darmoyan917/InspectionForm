@@ -78,6 +78,10 @@ public class saveFile implements saveFileDAO {
         if(!file.exists()){
         file.createNewFile();
         }
+        else if (file.exists()){
+            file.delete();
+            file.createNewFile();
+        }
     try (PrintWriter out = new PrintWriter(
                                new BufferedWriter(
                                new FileWriter(file,true)))){
