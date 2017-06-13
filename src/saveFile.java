@@ -18,7 +18,6 @@ import javax.swing.text.BadLocationException;
 
 public class saveFile implements saveFileDAO {
     File selFile = null;
-    int i =0;
     
     public saveFile(){
         
@@ -36,7 +35,7 @@ public class saveFile implements saveFileDAO {
         return arraySize;
     }
     
-    public String[] getComponenets(Container container, int arraySize){
+    public String[] getComponenets(Container container, int arraySize, int i){
         
         i = 0;
         String [] ReadField = new String [arraySize];
@@ -45,13 +44,10 @@ public class saveFile implements saveFileDAO {
             if (c instanceof JTextField) {
                 JTextField f = (JTextField) c;
                 ReadField[i] = f.getText();
-                System.out.println(ReadField[i]);
-                
                 i++;
             } else if (c instanceof JComboBox){
                 if(((JComboBox) c).getSelectedIndex()>=0){
                 ReadField[i] = ((JComboBox) c).getSelectedItem().toString();
-                System.out.println(ReadField[i]);
                 i++;
                 }
                 else {
@@ -59,19 +55,19 @@ public class saveFile implements saveFileDAO {
                     break;
                      }
                 } else if (c instanceof Container) {
-                getComponenets((Container) c, arraySize );
+                getComponenets((Container) c, arraySize, i );
             }
             
         }
         return ReadField;
         
     }
-    public void setComponentsToNewFile(JTextField yearText, JComboBox MakeComboBox, JComboBox ModelComboBox, JTextField vinText, JFileChooser SaveFileChooser, JFrame frame, String[] ReadField){
+    public int setComponentsToNewFile(JTextField yearText, JComboBox MakeComboBox, JComboBox ModelComboBox, JTextField vinText, JFileChooser SaveFileChooser, JFrame frame, String[] ReadField){
          try {
             selFile = new File(yearText.getText() + " "+ MakeComboBox.getSelectedItem() + " " + ModelComboBox.getSelectedItem() + " " + vinText.getText(13,4).toUpperCase() + ".txt");
         } catch (BadLocationException ex) {
             JOptionPane.showMessageDialog(new javax.swing.JWindow(), "Please enter a valid 17 digit VIN number.");
-            return;
+            return 0;
         }
     SaveFileChooser.setSelectedFile(selFile);
     int returnval = SaveFileChooser.showSaveDialog(frame);
@@ -84,9 +80,9 @@ public class saveFile implements saveFileDAO {
         }
     try (PrintWriter out = new PrintWriter(
                                new BufferedWriter(
-                               new FileWriter(file)))){
-            for (String ReadField1 : ReadField) {
-                out.println(ReadField1);
+                               new FileWriter(file,true)))){
+            for (int j = 0; j< ReadField.length; j++) {
+                out.println(ReadField[j]);
             }
       } catch (IOException ex) {
             Logger.getLogger(InspectionFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -95,9 +91,20 @@ public class saveFile implements saveFileDAO {
           
       }
     }
+    return returnval;
     }
     
-    public void setComponentsToFile(){
-        
+    public void setComponentsToFile( String[] ReadField, JFileChooser SaveFileChooser){
+        File file = SaveFileChooser.getSelectedFile();
+        try (PrintWriter out = new PrintWriter(
+                               new BufferedWriter(
+                               new FileWriter(file,true)))){
+            for (String ReadField1 : ReadField) {
+                out.println(ReadField1);
+               
+            }
+      } catch (IOException ex) {
+            Logger.getLogger(InspectionFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
