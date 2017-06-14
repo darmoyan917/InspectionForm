@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import javax.swing.JOptionPane;
 
 
-public final class ModelSelection implements ModelDAO {
+public final class ModelSelection implements ModelInterface {
     
     private Path ModelFilePath = null;
     private File ModelFile = null;

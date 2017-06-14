@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 
-public interface saveFileDAO {
+public interface saveFileInterface {
      String[] getComponenets(Container container, int arraySize, int i);
      int getComponentSize(Container container);
      int setComponentsToNewFile(JTextField yearText, JComboBox MakeComboBox, JComboBox ModelComboBox, JTextField vinText, JFileChooser SaveFileChooser, JFrame frame, String[] ReadField);

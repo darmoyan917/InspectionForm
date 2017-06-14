@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 
-public class openFile implements openFileDAO {
+public class openFile implements openFileInterface {
     
     
     public String[] openFile(File openfile, int NumOfLines){

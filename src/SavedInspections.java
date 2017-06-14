@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import org.apache.commons.io.FilenameUtils;
 
 
-public class SavedInspections implements SavedInspectionsDAO{
+public class SavedInspections implements SavedInspectionsInterface{
     private Path SavedFilePath = null;
     private File SavedFile = null;
     

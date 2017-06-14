@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 import javax.swing.JOptionPane;
 
 
-public class SetupShopInfo implements SetupDAO {
+public class SetupShopInfo implements SetupInterface {
     
     private Path SetupFilePath = null;
     private File SetupFile = null;

@@ -20,12 +20,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 final class InspectionFrame extends javax.swing.JFrame  {
     
-    private static ModelDAO modelDAO = null;
-    private static SetupDAO setupDAO = null;
+    private static ModelInterface modelDAO = null;
+    private static SetupInterface setupDAO = null;
     private static PrinterInterface printerint = null;
-    private static SavedInspectionsDAO saveInspectDAO = null;
-    private static saveFileDAO savefileDAO = null;
-    private static openFileDAO openfileDAO = null;
+    private static SavedInspectionsInterface saveInspectDAO = null;
+    private static saveFileInterface savefileDAO = null;
+    private static openFileInterface openfileDAO = null;
     public InspectionFrame() {
         initComponents();
     }
@@ -2127,7 +2127,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     // function to setup the print page and import all necessary info.
     public boolean setupFrameToPrint(){
         boolean isfilled;
-        setupDAO = DAOFactory.getSetupDAO();
+        setupDAO = InterfaceFactory.getSetupDAO();
         int numOfLines = setupDAO.LineNumber();
         String[] SetupInfoRead = setupDAO.getSetupInfo(numOfLines);
         ShopNamePrintLabel.setText(SetupInfoRead[0]);
@@ -2145,7 +2145,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
         return isfilled;
         }
     private void PrintItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrintItemActionPerformed
-        printerint = DAOFactory.getPrintInt();
+        printerint = InterfaceFactory.getPrintInt();
         boolean isfilled = setupFrameToPrint();
         if(isfilled){
         PrintFrame.setVisible(true);
@@ -2180,7 +2180,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }
     //Fill up all the fields from file, from open button.
     public void OpenFileInitializer(){
-        openfileDAO = DAOFactory.getOpenFileDAO();
+        openfileDAO = InterfaceFactory.getOpenFileDAO();
         int returnvalue = OpenFileChooser.showOpenDialog(this);
         if(returnvalue == JFileChooser.APPROVE_OPTION){
             File Openfile = OpenFileChooser.getSelectedFile();
@@ -2191,7 +2191,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }
     //Fill up all the fields from file, From File list on left side.
     public void OpenFileInitializer(File Openfile){
-            openfileDAO = DAOFactory.getOpenFileDAO();
+            openfileDAO = InterfaceFactory.getOpenFileDAO();
             int numoflines = openfileDAO.LineNumber(Openfile);
             String[] readFile = openfileDAO.openFile(Openfile, numoflines);
             openfileDAO.setComponenets(this.InfoPanel,readFile, 0);
@@ -2207,7 +2207,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }//GEN-LAST:event_ClearFormActionPerformed
     
     private void SaveItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveItemActionPerformed
-        savefileDAO = DAOFactory.getSaveFileDAO();
+        savefileDAO = InterfaceFactory.getSaveFileDAO();
         int ArraySize = savefileDAO.getComponentSize(InfoPanel);
         String [] component1 = savefileDAO.getComponenets(InfoPanel,ArraySize , 0);
         int save = savefileDAO.setComponentsToNewFile(yearText, MakeComboBox, ModelComboBox, vinText, SaveFileChooser, this, component1);
@@ -2229,7 +2229,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
         int MakeIndex = MakeComboBox.getSelectedIndex();
         if(MakeIndex > 0){
         String SelectedMake = MakeComboBox.getItemAt(MakeIndex).toString();
-        modelDAO = DAOFactory.getModelDAO(SelectedMake);
+        modelDAO = InterfaceFactory.getModelDAO(SelectedMake);
         String[] ModelCombo = modelDAO.SetModelCombo();
         ModelComboBox.removeAllItems();
         for (int i = 0; i < ModelCombo.length; i++) {
@@ -2258,7 +2258,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
     }//GEN-LAST:event_CancelSetupActionPerformed
 
     private void SaveSetupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveSetupActionPerformed
-        setupDAO = DAOFactory.getSetupDAO();
+        setupDAO = InterfaceFactory.getSetupDAO();
         if (!ShopNameField.getText().equals("")) {
             setupDAO.UpdateSetupFile(ShopNameField.getText(), ShopAddressField.getText(), ShopCityField.getText(), ShopPhoneField.getText(), EmailSetupField.getText(), WebsiteSetupField.getText());
             SetupFrame.setVisible(false);
@@ -2273,7 +2273,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
     private void SavedInspectionsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SavedInspectionsLabelMouseClicked
         DefaultListModel saveList = new DefaultListModel();
-        saveInspectDAO = DAOFactory.getInspectionsDAO();
+        saveInspectDAO = InterfaceFactory.getInspectionsDAO();
         saveInspectDAO.getSavedInspections(SavedFileList, saveList);
     }//GEN-LAST:event_SavedInspectionsLabelMouseClicked
   

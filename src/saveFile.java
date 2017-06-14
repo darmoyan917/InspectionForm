@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.text.BadLocationException;
 
 
-public class saveFile implements saveFileDAO {
+public class saveFile implements saveFileInterface {
     File selFile = null;
     
     public saveFile(){
