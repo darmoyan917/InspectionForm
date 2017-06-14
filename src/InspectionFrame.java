@@ -1,4 +1,3 @@
-
 import java.awt.Toolkit;
 import java.awt.Color;
 import static java.awt.Color.GREEN;
@@ -29,7 +28,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
     private static openFileDAO openfileDAO = null;
     public InspectionFrame() {
         initComponents();
-        
     }
     
     @SuppressWarnings("unchecked")
@@ -1327,16 +1325,12 @@ final class InspectionFrame extends javax.swing.JFrame  {
         });
         inspectionItemPanel.add(cvJointsAxlesSeals, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 1560, 149, 30));
 
+        brakeFluidText.setText("");
         brakeFluidText.setToolTipText("Brake Fluid Condition");
         brakeFluidText.setBorder(null);
         brakeFluidText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         brakeFluidText.setVisible(false);
         brakeFluidText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        brakeFluidText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brakeFluidTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(brakeFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 11, 349, 30));
 
         coolantText.setToolTipText("Brake Fluid Condition");
@@ -1344,11 +1338,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         coolantText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         coolantText.setVisible(false);
         coolantText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        coolantText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                coolantTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(coolantText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 47, 349, 30));
 
         beltsText.setToolTipText("Brake Fluid Condition");
@@ -1356,11 +1345,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         beltsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         beltsText.setVisible(false);
         beltsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        beltsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                beltsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(beltsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 83, 349, 30));
 
         cvJointsAxlesSealsText.setToolTipText("Brake Fluid Condition");
@@ -1368,11 +1352,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         cvJointsAxlesSealsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         cvJointsAxlesSealsText.setVisible(false);
         cvJointsAxlesSealsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        cvJointsAxlesSealsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cvJointsAxlesSealsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(cvJointsAxlesSealsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1560, 349, 30));
 
         airFilterText.setToolTipText("Brake Fluid Condition");
@@ -1380,11 +1359,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         airFilterText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         airFilterText.setVisible(false);
         airFilterText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        airFilterText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                airFilterTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(airFilterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 349, 30));
 
         oilConditionText.setToolTipText("Brake Fluid Condition");
@@ -1392,11 +1366,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         oilConditionText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         oilConditionText.setVisible(false);
         oilConditionText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        oilConditionText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                oilConditionTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(oilConditionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 349, 30));
 
         transmissionFluidText.setToolTipText("Brake Fluid Condition");
@@ -1404,11 +1373,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         transmissionFluidText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         transmissionFluidText.setVisible(false);
         transmissionFluidText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        transmissionFluidText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                transmissionFluidTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(transmissionFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 349, 30));
 
         batteryConditionText.setToolTipText("Brake Fluid Condition");
@@ -1416,11 +1380,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         batteryConditionText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         batteryConditionText.setVisible(false);
         batteryConditionText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        batteryConditionText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                batteryConditionTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(batteryConditionText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 349, 30));
 
         washerFluidText.setToolTipText("Brake Fluid Condition");
@@ -1428,11 +1387,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         washerFluidText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         washerFluidText.setVisible(false);
         washerFluidText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        washerFluidText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                washerFluidTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(washerFluidText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 349, 30));
 
         motorMountsText.setToolTipText("Brake Fluid Condition");
@@ -1440,11 +1394,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         motorMountsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         motorMountsText.setVisible(false);
         motorMountsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        motorMountsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                motorMountsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(motorMountsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 349, 30));
 
         starterText.setToolTipText("Brake Fluid Condition");
@@ -1452,11 +1401,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         starterText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         starterText.setVisible(false);
         starterText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        starterText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                starterTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(starterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 349, 30));
 
         chargingSystemText.setToolTipText("Brake Fluid Condition");
@@ -1464,11 +1408,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         chargingSystemText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         chargingSystemText.setVisible(false);
         chargingSystemText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        chargingSystemText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chargingSystemTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(chargingSystemText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 349, 30));
 
         seatBeltsText.setToolTipText("Brake Fluid Condition");
@@ -1476,11 +1415,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         seatBeltsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         seatBeltsText.setVisible(false);
         seatBeltsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        seatBeltsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                seatBeltsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(seatBeltsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 440, 349, 30));
 
         doorLocksText.setToolTipText("Brake Fluid Condition");
@@ -1488,11 +1422,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         doorLocksText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         doorLocksText.setVisible(false);
         doorLocksText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        doorLocksText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                doorLocksTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(doorLocksText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 349, 30));
 
         climateControlText.setToolTipText("Brake Fluid Condition");
@@ -1500,11 +1429,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         climateControlText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         climateControlText.setVisible(false);
         climateControlText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        climateControlText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                climateControlTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(climateControlText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, 349, 30));
 
         instrumentClusterText.setToolTipText("Brake Fluid Condition");
@@ -1512,11 +1436,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         instrumentClusterText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         instrumentClusterText.setVisible(false);
         instrumentClusterText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        instrumentClusterText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                instrumentClusterTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(instrumentClusterText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 560, 349, 30));
 
         milLightText.setToolTipText("Brake Fluid Condition");
@@ -1524,11 +1443,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         milLightText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         milLightText.setVisible(false);
         milLightText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        milLightText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                milLightTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(milLightText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 600, 349, 30));
 
         absBrakeAirbagText.setToolTipText("Brake Fluid Condition");
@@ -1536,11 +1450,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         absBrakeAirbagText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         absBrakeAirbagText.setVisible(false);
         absBrakeAirbagText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        absBrakeAirbagText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                absBrakeAirbagTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(absBrakeAirbagText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 640, 349, 30));
 
         windshieldText.setToolTipText("Brake Fluid Condition");
@@ -1548,11 +1457,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         windshieldText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         windshieldText.setVisible(false);
         windshieldText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        windshieldText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                windshieldTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(windshieldText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 680, 349, 30));
 
         mirrorsText.setToolTipText("Brake Fluid Condition");
@@ -1560,11 +1464,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         mirrorsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         mirrorsText.setVisible(false);
         mirrorsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        mirrorsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mirrorsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(mirrorsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 720, 349, 30));
 
         powerWindowsText.setToolTipText("Brake Fluid Condition");
@@ -1572,11 +1471,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         powerWindowsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         powerWindowsText.setVisible(false);
         powerWindowsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        powerWindowsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                powerWindowsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(powerWindowsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 760, 349, 30));
 
         stereoText.setToolTipText("Brake Fluid Condition");
@@ -1584,11 +1478,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         stereoText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         stereoText.setVisible(false);
         stereoText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        stereoText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stereoTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(stereoText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 800, 349, 30));
 
         doorHandlesText.setToolTipText("Brake Fluid Condition");
@@ -1596,11 +1485,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         doorHandlesText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         doorHandlesText.setVisible(false);
         doorHandlesText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        doorHandlesText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                doorHandlesTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(doorHandlesText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 840, 349, 30));
 
         hornText.setToolTipText("Brake Fluid Condition");
@@ -1608,11 +1492,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         hornText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         hornText.setVisible(false);
         hornText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        hornText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hornTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(hornText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 880, 349, 30));
 
         wipersText.setToolTipText("Brake Fluid Condition");
@@ -1620,11 +1499,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         wipersText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         wipersText.setVisible(false);
         wipersText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        wipersText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wipersTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(wipersText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 920, 349, 30));
 
         lowBeamsText.setToolTipText("Brake Fluid Condition");
@@ -1632,11 +1506,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         lowBeamsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         lowBeamsText.setVisible(false);
         lowBeamsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        lowBeamsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lowBeamsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(lowBeamsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 960, 349, 30));
 
         highBeamsText.setToolTipText("Brake Fluid Condition");
@@ -1644,11 +1513,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         highBeamsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         highBeamsText.setVisible(false);
         highBeamsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        highBeamsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                highBeamsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(highBeamsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1000, 349, 30));
 
         fogLightsText.setToolTipText("Brake Fluid Condition");
@@ -1656,11 +1520,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         fogLightsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         fogLightsText.setVisible(false);
         fogLightsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        fogLightsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fogLightsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(fogLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1040, 349, 30));
 
         turnSignalsFText.setToolTipText("Brake Fluid Condition");
@@ -1668,11 +1527,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         turnSignalsFText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         turnSignalsFText.setVisible(false);
         turnSignalsFText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        turnSignalsFText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                turnSignalsFTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(turnSignalsFText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1080, 349, 30));
 
         turnSignalsRText.setToolTipText("Brake Fluid Condition");
@@ -1680,11 +1534,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         turnSignalsRText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         turnSignalsRText.setVisible(false);
         turnSignalsRText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        turnSignalsRText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                turnSignalsRTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(turnSignalsRText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1120, 349, 30));
 
         runningLightsText.setToolTipText("Brake Fluid Condition");
@@ -1692,11 +1541,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         runningLightsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         runningLightsText.setVisible(false);
         runningLightsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        runningLightsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                runningLightsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(runningLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1160, 349, 30));
 
         brakeLightsText.setToolTipText("Brake Fluid Condition");
@@ -1704,11 +1548,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         brakeLightsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         brakeLightsText.setVisible(false);
         brakeLightsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        brakeLightsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                brakeLightsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(brakeLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1200, 349, 30));
 
         licensePlateLightsText.setToolTipText("Brake Fluid Condition");
@@ -1716,11 +1555,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         licensePlateLightsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         licensePlateLightsText.setVisible(false);
         licensePlateLightsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        licensePlateLightsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                licensePlateLightsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(licensePlateLightsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1240, 349, 30));
 
         reverseText.setToolTipText("Brake Fluid Condition");
@@ -1728,11 +1562,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         reverseText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         reverseText.setVisible(false);
         reverseText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        reverseText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reverseTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(reverseText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1280, 349, 30));
 
         suspensionComponentsText.setToolTipText("Brake Fluid Condition");
@@ -1740,11 +1569,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         suspensionComponentsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         suspensionComponentsText.setVisible(false);
         suspensionComponentsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        suspensionComponentsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                suspensionComponentsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(suspensionComponentsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1320, 349, 30));
 
         wheelBearingsText.setToolTipText("Brake Fluid Condition");
@@ -1752,11 +1576,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         wheelBearingsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         wheelBearingsText.setVisible(false);
         wheelBearingsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        wheelBearingsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wheelBearingsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(wheelBearingsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1360, 349, 30));
 
         rotorsAndPadsFText.setToolTipText("Brake Fluid Condition");
@@ -1764,11 +1583,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         rotorsAndPadsFText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         rotorsAndPadsFText.setVisible(false);
         rotorsAndPadsFText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        rotorsAndPadsFText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rotorsAndPadsFTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(rotorsAndPadsFText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1400, 349, 30));
 
         rotorsAndPadsRText.setToolTipText("Brake Fluid Condition");
@@ -1776,11 +1590,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         rotorsAndPadsRText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         rotorsAndPadsRText.setVisible(false);
         rotorsAndPadsRText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        rotorsAndPadsRText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rotorsAndPadsRTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(rotorsAndPadsRText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1440, 349, 30));
 
         spareJackToolsText.setToolTipText("Brake Fluid Condition");
@@ -1788,11 +1597,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         spareJackToolsText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         spareJackToolsText.setVisible(false);
         spareJackToolsText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        spareJackToolsText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                spareJackToolsTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(spareJackToolsText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1480, 349, 30));
 
         exhaustSystemText.setToolTipText("Brake Fluid Condition");
@@ -1800,11 +1604,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         exhaustSystemText.setDisabledTextColor(new java.awt.Color(240, 240, 240));
         exhaustSystemText.setVisible(false);
         exhaustSystemText.setSelectedTextColor(new java.awt.Color(240, 240, 240));
-        exhaustSystemText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exhaustSystemTextActionPerformed(evt);
-            }
-        });
         inspectionItemPanel.add(exhaustSystemText, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 1520, 349, 30));
 
         InspectionScrollPanel.setViewportView(inspectionItemPanel);
@@ -2249,18 +2048,19 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 1026, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(InfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(TirePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 629, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 607, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(InfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1020, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(FilePickerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 996, Short.MAX_VALUE)
+                    .addComponent(FilePickerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1012, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
@@ -2268,8 +2068,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TirePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 753, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 75, Short.MAX_VALUE))
+                            .addComponent(InspectionScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 769, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 59, Short.MAX_VALUE))
         );
 
         bindingGroup.bind();
@@ -2287,10 +2087,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             beltsText.setVisible(false);
             beltsText.setBorder(null);
-            
         }
-        
-
     }//GEN-LAST:event_beltsActionPerformed
 
     private void beltsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_beltsStateChanged
@@ -2300,8 +2097,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             belts.setBackground(Color.GREEN);
         }
-        
-
     }//GEN-LAST:event_beltsStateChanged
 
     private void coolantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coolantActionPerformed
@@ -2313,7 +2108,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             coolantText.setVisible(false);
             coolantText.setBorder(null);
-            
         }
     }//GEN-LAST:event_coolantActionPerformed
 
@@ -2350,7 +2144,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             oilConditionText.setVisible(false);
             oilConditionText.setBorder(null);
-            
         }
     }//GEN-LAST:event_oilConditionActionPerformed
 
@@ -2363,7 +2156,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             transmissionFluidText.setVisible(false);
             transmissionFluidText.setBorder(null);
-            
         }
     }//GEN-LAST:event_transmissionFluidActionPerformed
 
@@ -2376,7 +2168,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             batteryConditionText.setVisible(false);
             batteryConditionText.setBorder(null);
-            
         }
     }//GEN-LAST:event_batteryConditionActionPerformed
 
@@ -2389,7 +2180,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             washerFluidText.setVisible(false);
             washerFluidText.setBorder(null);
-            
         }
     }//GEN-LAST:event_washerFluidActionPerformed
 
@@ -2402,7 +2192,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             motorMountsText.setVisible(false);
             motorMountsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_motormountsActionPerformed
 
@@ -2415,7 +2204,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             starterText.setVisible(false);
             starterText.setBorder(null);
-            
         }
     }//GEN-LAST:event_starterActionPerformed
 
@@ -2427,8 +2215,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             chargingSystemText.setVisible(false);
-            chargingSystemText.setBorder(null);
-            
+            chargingSystemText.setBorder(null); 
         }
     }//GEN-LAST:event_chargingSystemActionPerformed
 
@@ -2440,8 +2227,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             seatBeltsText.setVisible(false);
-            seatBeltsText.setBorder(null);
-            
+            seatBeltsText.setBorder(null);     
         }
     }//GEN-LAST:event_seatBeltsActionPerformed
 
@@ -2454,7 +2240,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             doorLocksText.setVisible(false);
             doorLocksText.setBorder(null);
-            
         }
     }//GEN-LAST:event_doorLocksActionPerformed
 
@@ -2466,8 +2251,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             climateControlText.setVisible(false);
-            climateControlText.setBorder(null);
-            
+            climateControlText.setBorder(null); 
         }
     }//GEN-LAST:event_climateControlActionPerformed
 
@@ -2479,8 +2263,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             instrumentClusterText.setVisible(false);
-            instrumentClusterText.setBorder(null);
-            
+            instrumentClusterText.setBorder(null);  
         }
     }//GEN-LAST:event_instrumentClusterActionPerformed
 
@@ -2493,7 +2276,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             milLightText.setVisible(false);
             milLightText.setBorder(null);
-            
         }
     }//GEN-LAST:event_milLightActionPerformed
 
@@ -2506,7 +2288,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             absBrakeAirbagText.setVisible(false);
             absBrakeAirbagText.setBorder(null);
-            
         }
     }//GEN-LAST:event_absBrakeAirbagActionPerformed
 
@@ -2518,8 +2299,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             windshieldText.setVisible(false);
-            windshieldText.setBorder(null);
-            
+            windshieldText.setBorder(null); 
         }
     }//GEN-LAST:event_windshieldActionPerformed
 
@@ -2532,7 +2312,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             mirrorsText.setVisible(false);
             mirrorsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_MirrorsActionPerformed
 
@@ -2544,8 +2323,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             powerWindowsText.setVisible(false);
-            powerWindowsText.setBorder(null);
-            
+            powerWindowsText.setBorder(null);  
         }
     }//GEN-LAST:event_powerWindowsActionPerformed
 
@@ -2558,7 +2336,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             stereoText.setVisible(false);
             stereoText.setBorder(null);
-            
         }
     }//GEN-LAST:event_stereoActionPerformed
 
@@ -2570,8 +2347,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             doorHandlesText.setVisible(false);
-            doorHandlesText.setBorder(null);
-            
+            doorHandlesText.setBorder(null);   
         }
     }//GEN-LAST:event_doorHandlesActionPerformed
 
@@ -2584,7 +2360,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             hornText.setVisible(false);
             hornText.setBorder(null);
-            
         }
     }//GEN-LAST:event_hornActionPerformed
 
@@ -2597,7 +2372,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             wipersText.setVisible(false);
             wipersText.setBorder(null);
-            
         }
     }//GEN-LAST:event_wipersActionPerformed
 
@@ -2609,8 +2383,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             lowBeamsText.setVisible(false);
-            lowBeamsText.setBorder(null);
-            
+            lowBeamsText.setBorder(null); 
         }
     }//GEN-LAST:event_lowBeamsActionPerformed
 
@@ -2623,7 +2396,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             highBeamsText.setVisible(false);
             highBeamsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_highBeamsActionPerformed
 
@@ -2636,7 +2408,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             fogLightsText.setVisible(false);
             fogLightsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_fogLightsActionPerformed
 
@@ -2649,7 +2420,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             turnSignalsFText.setVisible(false);
             turnSignalsFText.setBorder(null);
-            
         }
     }//GEN-LAST:event_turnSignalsFActionPerformed
 
@@ -2662,7 +2432,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             turnSignalsRText.setVisible(false);
             turnSignalsRText.setBorder(null);
-            
         }
     }//GEN-LAST:event_turnSignalsRActionPerformed
 
@@ -2675,7 +2444,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             runningLightsText.setVisible(false);
             runningLightsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_runningLightsActionPerformed
 
@@ -2688,7 +2456,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             brakeLightsText.setVisible(false);
             brakeLightsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_brakeLightsActionPerformed
 
@@ -2701,7 +2468,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             licensePlateLightsText.setVisible(false);
             licensePlateLightsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_licensePlateLightsActionPerformed
 
@@ -2713,8 +2479,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             inspectionItemPanel.repaint();
         } else {
             reverseText.setVisible(false);
-            reverseText.setBorder(null);
-            
+            reverseText.setBorder(null); 
         }
     }//GEN-LAST:event_reverseActionPerformed
 
@@ -2727,7 +2492,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             suspensionComponentsText.setVisible(false);
             suspensionComponentsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_suspensionComponentsActionPerformed
 
@@ -2740,7 +2504,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             wheelBearingsText.setVisible(false);
             wheelBearingsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_wheelBearingsActionPerformed
 
@@ -2753,7 +2516,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             rotorsAndPadsFText.setVisible(false);
             rotorsAndPadsFText.setBorder(null);
-            
         }
     }//GEN-LAST:event_rotorsAndPadsFActionPerformed
 
@@ -2766,7 +2528,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             rotorsAndPadsRText.setVisible(false);
             rotorsAndPadsRText.setBorder(null);
-            
         }
     }//GEN-LAST:event_rotorsAndPadsRActionPerformed
 
@@ -2779,7 +2540,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             spareJackToolsText.setVisible(false);
             spareJackToolsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_spareJackToolsActionPerformed
 
@@ -2792,7 +2552,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             exhaustSystemText.setVisible(false);
             exhaustSystemText.setBorder(null);
-            
         }
     }//GEN-LAST:event_exhaustSystemActionPerformed
 
@@ -2805,7 +2564,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             cvJointsAxlesSealsText.setVisible(false);
             cvJointsAxlesSealsText.setBorder(null);
-            
         }
     }//GEN-LAST:event_cvJointsAxlesSealsActionPerformed
 
@@ -2818,22 +2576,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             brakeFluidText.setVisible(false);
             brakeFluidText.setBorder(null);
-            
         }
-        
     }//GEN-LAST:event_brakeFluidActionPerformed
-
-    private void brakeFluidTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brakeFluidTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_brakeFluidTextActionPerformed
-
-    private void coolantTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coolantTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_coolantTextActionPerformed
-
-    private void beltsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beltsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_beltsTextActionPerformed
 
     private void airFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_airFilterActionPerformed
         if (airFilter.isSelected()) {
@@ -2844,7 +2588,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             airFilterText.setVisible(false);
             airFilterText.setBorder(null);
-            
         }
     }//GEN-LAST:event_airFilterActionPerformed
 
@@ -2854,7 +2597,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             oilCondition.setBackground(Color.GREEN);
         }
-        
     }//GEN-LAST:event_oilConditionStateChanged
 
     private void transmissionFluidStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_transmissionFluidStateChanged
@@ -2863,7 +2605,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             transmissionFluid.setBackground(Color.GREEN);
         }
-        
     }//GEN-LAST:event_transmissionFluidStateChanged
 
     private void batteryConditionStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_batteryConditionStateChanged
@@ -3132,154 +2873,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         }
     }//GEN-LAST:event_cvJointsAxlesSealsStateChanged
 
-    private void cvJointsAxlesSealsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvJointsAxlesSealsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cvJointsAxlesSealsTextActionPerformed
-
-    private void airFilterTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_airFilterTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_airFilterTextActionPerformed
-
-    private void oilConditionTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oilConditionTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_oilConditionTextActionPerformed
-
-    private void transmissionFluidTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transmissionFluidTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_transmissionFluidTextActionPerformed
-
-    private void batteryConditionTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batteryConditionTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_batteryConditionTextActionPerformed
-
-    private void washerFluidTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_washerFluidTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_washerFluidTextActionPerformed
-
-    private void motorMountsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_motorMountsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_motorMountsTextActionPerformed
-
-    private void starterTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_starterTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_starterTextActionPerformed
-
-    private void chargingSystemTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chargingSystemTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chargingSystemTextActionPerformed
-
-    private void seatBeltsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seatBeltsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_seatBeltsTextActionPerformed
-
-    private void climateControlTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_climateControlTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_climateControlTextActionPerformed
-
-    private void instrumentClusterTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instrumentClusterTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_instrumentClusterTextActionPerformed
-
-    private void milLightTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_milLightTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_milLightTextActionPerformed
-
-    private void absBrakeAirbagTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_absBrakeAirbagTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_absBrakeAirbagTextActionPerformed
-
-    private void windshieldTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_windshieldTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_windshieldTextActionPerformed
-
-    private void mirrorsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mirrorsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mirrorsTextActionPerformed
-
-    private void powerWindowsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerWindowsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_powerWindowsTextActionPerformed
-
-    private void stereoTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stereoTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stereoTextActionPerformed
-
-    private void doorHandlesTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doorHandlesTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_doorHandlesTextActionPerformed
-
-    private void hornTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hornTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hornTextActionPerformed
-
-    private void wipersTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wipersTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_wipersTextActionPerformed
-
-    private void lowBeamsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lowBeamsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lowBeamsTextActionPerformed
-
-    private void highBeamsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highBeamsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_highBeamsTextActionPerformed
-
-    private void fogLightsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fogLightsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fogLightsTextActionPerformed
-
-    private void turnSignalsFTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnSignalsFTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_turnSignalsFTextActionPerformed
-
-    private void turnSignalsRTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnSignalsRTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_turnSignalsRTextActionPerformed
-
-    private void runningLightsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runningLightsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_runningLightsTextActionPerformed
-
-    private void brakeLightsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brakeLightsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_brakeLightsTextActionPerformed
-
-    private void licensePlateLightsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_licensePlateLightsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_licensePlateLightsTextActionPerformed
-
-    private void reverseTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reverseTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reverseTextActionPerformed
-
-    private void suspensionComponentsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suspensionComponentsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_suspensionComponentsTextActionPerformed
-
-    private void wheelBearingsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wheelBearingsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_wheelBearingsTextActionPerformed
-
-    private void rotorsAndPadsFTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rotorsAndPadsFTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rotorsAndPadsFTextActionPerformed
-
-    private void rotorsAndPadsRTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rotorsAndPadsRTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rotorsAndPadsRTextActionPerformed
-
-    private void spareJackToolsTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spareJackToolsTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_spareJackToolsTextActionPerformed
-
-    private void exhaustSystemTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exhaustSystemTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_exhaustSystemTextActionPerformed
-
-    private void doorLocksTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doorLocksTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_doorLocksTextActionPerformed
-
     private void rfTireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rfTireActionPerformed
         if (rfTire.isSelected()) {
             rfTireText.setVisible(true);
@@ -3289,7 +2882,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             rfTireText.setVisible(false);
             rfTireText.setBorder(null);
-            
         }
     }//GEN-LAST:event_rfTireActionPerformed
 
@@ -3302,7 +2894,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             lfTireText.setVisible(false);
             lfTireText.setBorder(null);
-            
         }
     }//GEN-LAST:event_lfTireActionPerformed
 
@@ -3355,7 +2946,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             lrTireText.setVisible(false);
             lrTireText.setBorder(null);
-            
         }
     }//GEN-LAST:event_lrTireActionPerformed
 
@@ -3368,7 +2958,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             spareTireText.setVisible(false);
             spareTireText.setBorder(null);
-            
         }
     }//GEN-LAST:event_spareTireActionPerformed
 
@@ -3381,7 +2970,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         } else {
             rrTireText.setVisible(false);
             rrTireText.setBorder(null);
-            
         }
     }//GEN-LAST:event_rrTireActionPerformed
 
@@ -3394,9 +2982,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
             lfTireText.setBackground(Color.RED);
         } else if (lfTire <= 10) {
             lfTireText.setBackground(Color.YELLOW);
-        } else if (lfTire > 10) {
+        } else
             lfTireText.setBackground(Color.GREEN);
-        }
         }
     }//GEN-LAST:event_lfTireTextFocusLost
 
@@ -3409,9 +2996,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
             rfTireText.setBackground(Color.RED);
         } else if (rfTire <= 10) {
             rfTireText.setBackground(Color.YELLOW);
-        } else if (rfTire > 10) {
+        } else
             rfTireText.setBackground(Color.GREEN);
-        }
         }
     }//GEN-LAST:event_rfTireTextFocusLost
 
@@ -3424,9 +3010,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
             lrTireText.setBackground(Color.RED);
         } else if (lrTire <= 10) {
             lrTireText.setBackground(Color.YELLOW);
-        } else if (lrTire > 10) {
+        } else
             lrTireText.setBackground(Color.GREEN);
-        }
         }
     }//GEN-LAST:event_lrTireTextFocusLost
 
@@ -3439,9 +3024,8 @@ final class InspectionFrame extends javax.swing.JFrame  {
             rrTireText.setBackground(Color.RED);
         } else if (rrTire <= 10) {
             rrTireText.setBackground(Color.YELLOW);
-        } else if (rrTire > 10) {
+        } else
             rrTireText.setBackground(Color.GREEN);
-        }
         }
     }//GEN-LAST:event_rrTireTextFocusLost
 
@@ -3460,9 +3044,9 @@ final class InspectionFrame extends javax.swing.JFrame  {
         }
     }//GEN-LAST:event_spareTireTextFocusLost
 
-       String [] ReadField = new String [80];
-       String [] selected = new String [80];
-       int i =0, s = 0, k =0,j =0;
+    String [] ReadField = new String [80];
+    String [] selected = new String [80];
+    int i =0, s = 0, k =0,j =0;
     public boolean GetPrintComponents (Container container) {
        
         boolean isfilled=true;
@@ -3488,13 +3072,10 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 } else if (c instanceof Container) {
                 GetPrintComponents((Container) c);
             }
-            
         }
         return isfilled;
     }
     public void FillPrintComponents(Container printContainer){
-        
-        
         for (Component f : printContainer.getComponents()) {
             
             if (f instanceof JTextField) {
@@ -3505,11 +3086,10 @@ final class InspectionFrame extends javax.swing.JFrame  {
                 k++;
             } else if (f instanceof Container) {
                 FillPrintComponents( (Container) f);
-            
             }
-           
         }
     }
+    // function to setup the print page and import all necessary info.
     public boolean setupFrameToPrint(){
         boolean isfilled;
         setupDAO = DAOFactory.getSetupDAO();
@@ -3537,6 +3117,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
         printerint.PrintPage(PrintFrame);
         }
     }//GEN-LAST:event_PrintItemActionPerformed
+    // Function to clear all text fields and empty them.
     public void clearTextFields(Container container) {
         
         for (Component c : container.getComponents()) {
@@ -3548,7 +3129,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             } 
         }
     }
-
+    // function to clear all buttons and reset their states.
     public void clearSelectedButtons(Container container) {
         for (Component c : container.getComponents()) {
             if (c instanceof JTextField) {
@@ -3562,6 +3143,7 @@ final class InspectionFrame extends javax.swing.JFrame  {
             }
         }
     }
+    //Fill up all the fields from file, from open button.
     public void OpenFileInitializer(){
         openfileDAO = DAOFactory.getOpenFileDAO();
         int returnvalue = OpenFileChooser.showOpenDialog(this);
@@ -3572,12 +3154,16 @@ final class InspectionFrame extends javax.swing.JFrame  {
             openfileDAO.setComponenets(this,readFile, 0);
         }
     }
+    //Fill up all the fields from file, From File list on left side.
     public void OpenFileInitializer(File Openfile){
             openfileDAO = DAOFactory.getOpenFileDAO();
             int numoflines = openfileDAO.LineNumber(Openfile);
             String[] readFile = openfileDAO.openFile(Openfile, numoflines);
-            openfileDAO.setComponenets(this,readFile, 0);
+            openfileDAO.setComponenets(this.InfoPanel,readFile, 0);
+            openfileDAO.setComponenets(this.TireDepthPanel,readFile, 8);
+            openfileDAO.setComponenets(this.inspectionItemPanel,readFile, 13);
     }
+    //Clear everything in the forms.
     private void ClearFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearFormActionPerformed
         clearTextFields(this.getContentPane());
         clearSelectedButtons(this.inspectionItemPanel);
