@@ -750,11 +750,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         brakeFluid.setBackground(new java.awt.Color(0, 255, 51));
         brakeFluid.setText("Brake Fluid");
         brakeFluid.setBorder(null);
-        brakeFluid.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                brakeFluidStateChanged(evt);
-            }
-        });
         brakeFluid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brakeFluidActionPerformed(evt);
@@ -765,11 +760,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         coolant.setBackground(new java.awt.Color(0, 255, 51));
         coolant.setText("Coolant");
         coolant.setBorder(null);
-        coolant.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                coolantStateChanged(evt);
-            }
-        });
         coolant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 coolantActionPerformed(evt);
@@ -781,11 +771,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         belts.setText("Belts");
         belts.setAutoscrolls(true);
         belts.setBorder(null);
-        belts.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                beltsStateChanged(evt);
-            }
-        });
         belts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 beltsActionPerformed(evt);
@@ -796,11 +781,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         airFilter.setBackground(new java.awt.Color(0, 255, 51));
         airFilter.setText("Air Filter");
         airFilter.setBorder(null);
-        airFilter.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                airFilterStateChanged(evt);
-            }
-        });
         airFilter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 airFilterActionPerformed(evt);
@@ -811,11 +791,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         oilCondition.setBackground(new java.awt.Color(0, 255, 51));
         oilCondition.setText("Oil Condition");
         oilCondition.setBackground(new java.awt.Color(0, 255, 51));
-        oilCondition.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                oilConditionStateChanged(evt);
-            }
-        });
         oilCondition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 oilConditionActionPerformed(evt);
@@ -826,11 +801,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         transmissionFluid.setBackground(new java.awt.Color(0, 255, 51));
         transmissionFluid.setText("Trans Fluid");
         transmissionFluid.setBackground(new java.awt.Color(0, 255, 51));
-        transmissionFluid.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                transmissionFluidStateChanged(evt);
-            }
-        });
         transmissionFluid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 transmissionFluidActionPerformed(evt);
@@ -842,11 +812,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         batteryCondition.setText("Battery Condition");
         batteryCondition.setActionCommand("");
         batteryCondition.setIconTextGap(0);
-        batteryCondition.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                batteryConditionStateChanged(evt);
-            }
-        });
         batteryCondition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 batteryConditionActionPerformed(evt);
@@ -856,11 +821,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         washerFluid.setBackground(new java.awt.Color(0, 255, 51));
         washerFluid.setText("Washer Fluid");
-        washerFluid.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                washerFluidStateChanged(evt);
-            }
-        });
         washerFluid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 washerFluidActionPerformed(evt);
@@ -870,11 +830,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         motormounts.setBackground(new java.awt.Color(0, 255, 51));
         motormounts.setText("Motor Mounts");
-        motormounts.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                motormountsStateChanged(evt);
-            }
-        });
         motormounts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 motormountsActionPerformed(evt);
@@ -884,11 +839,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         starter.setBackground(new java.awt.Color(0, 255, 51));
         starter.setText("Starter");
-        starter.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                starterStateChanged(evt);
-            }
-        });
         starter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 starterActionPerformed(evt);
@@ -898,11 +848,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         chargingSystem.setBackground(new java.awt.Color(0, 255, 51));
         chargingSystem.setText("Charging System");
-        chargingSystem.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                chargingSystemStateChanged(evt);
-            }
-        });
         chargingSystem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 chargingSystemActionPerformed(evt);
@@ -912,11 +857,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         seatBelts.setBackground(new java.awt.Color(0, 255, 51));
         seatBelts.setText("Seat Belts");
-        seatBelts.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                seatBeltsStateChanged(evt);
-            }
-        });
         seatBelts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 seatBeltsActionPerformed(evt);
@@ -926,11 +866,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         doorLocks.setBackground(new java.awt.Color(0, 255, 51));
         doorLocks.setText("Door Locks");
-        doorLocks.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                doorLocksStateChanged(evt);
-            }
-        });
         doorLocks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doorLocksActionPerformed(evt);
@@ -940,11 +875,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         climateControl.setBackground(new java.awt.Color(0, 255, 51));
         climateControl.setText("Climate Control");
-        climateControl.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                climateControlStateChanged(evt);
-            }
-        });
         climateControl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 climateControlActionPerformed(evt);
@@ -954,11 +884,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         instrumentCluster.setBackground(new java.awt.Color(0, 255, 51));
         instrumentCluster.setText("Instrument Cluster");
-        instrumentCluster.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                instrumentClusterStateChanged(evt);
-            }
-        });
         instrumentCluster.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 instrumentClusterActionPerformed(evt);
@@ -968,11 +893,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         milLight.setBackground(new java.awt.Color(0, 255, 51));
         milLight.setText("MIL Light");
-        milLight.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                milLightStateChanged(evt);
-            }
-        });
         milLight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 milLightActionPerformed(evt);
@@ -982,11 +902,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         absBrakeAirbag.setBackground(new java.awt.Color(0, 255, 51));
         absBrakeAirbag.setText("ABS/Brake/Airbag");
-        absBrakeAirbag.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                absBrakeAirbagStateChanged(evt);
-            }
-        });
         absBrakeAirbag.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 absBrakeAirbagActionPerformed(evt);
@@ -996,11 +911,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         windshield.setBackground(new java.awt.Color(0, 255, 51));
         windshield.setText("Windshield");
-        windshield.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                windshieldStateChanged(evt);
-            }
-        });
         windshield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 windshieldActionPerformed(evt);
@@ -1010,11 +920,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         Mirrors.setBackground(new java.awt.Color(0, 255, 51));
         Mirrors.setText("Mirrors");
-        Mirrors.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                MirrorsStateChanged(evt);
-            }
-        });
         Mirrors.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MirrorsActionPerformed(evt);
@@ -1024,11 +929,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         powerWindows.setBackground(new java.awt.Color(0, 255, 51));
         powerWindows.setText("Power Windows");
-        powerWindows.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                powerWindowsStateChanged(evt);
-            }
-        });
         powerWindows.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 powerWindowsActionPerformed(evt);
@@ -1038,11 +938,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         stereo.setBackground(new java.awt.Color(0, 255, 51));
         stereo.setText("Stereo");
-        stereo.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                stereoStateChanged(evt);
-            }
-        });
         stereo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 stereoActionPerformed(evt);
@@ -1052,11 +947,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         doorHandles.setBackground(new java.awt.Color(0, 255, 51));
         doorHandles.setText("Door Handles");
-        doorHandles.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                doorHandlesStateChanged(evt);
-            }
-        });
         doorHandles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 doorHandlesActionPerformed(evt);
@@ -1066,11 +956,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         horn.setBackground(new java.awt.Color(0, 255, 51));
         horn.setText("Horn");
-        horn.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                hornStateChanged(evt);
-            }
-        });
         horn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 hornActionPerformed(evt);
@@ -1080,11 +965,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         wipers.setBackground(new java.awt.Color(0, 255, 51));
         wipers.setText("Wipers");
-        wipers.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                wipersStateChanged(evt);
-            }
-        });
         wipers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wipersActionPerformed(evt);
@@ -1094,11 +974,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         lowBeams.setBackground(new java.awt.Color(0, 255, 51));
         lowBeams.setText("Low Beams");
-        lowBeams.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                lowBeamsStateChanged(evt);
-            }
-        });
         lowBeams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lowBeamsActionPerformed(evt);
@@ -1108,11 +983,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         highBeams.setBackground(new java.awt.Color(0, 255, 51));
         highBeams.setText("High Beams");
-        highBeams.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                highBeamsStateChanged(evt);
-            }
-        });
         highBeams.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 highBeamsActionPerformed(evt);
@@ -1122,11 +992,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         fogLights.setBackground(new java.awt.Color(0, 255, 51));
         fogLights.setText("Fog Lights");
-        fogLights.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                fogLightsStateChanged(evt);
-            }
-        });
         fogLights.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fogLightsActionPerformed(evt);
@@ -1136,11 +1001,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         turnSignalsF.setBackground(new java.awt.Color(0, 255, 51));
         turnSignalsF.setText("Turn Signals (F)");
-        turnSignalsF.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                turnSignalsFStateChanged(evt);
-            }
-        });
         turnSignalsF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turnSignalsFActionPerformed(evt);
@@ -1150,11 +1010,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         turnSignalsR.setBackground(new java.awt.Color(0, 255, 51));
         turnSignalsR.setText("Turn Signals (R)");
-        turnSignalsR.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                turnSignalsRStateChanged(evt);
-            }
-        });
         turnSignalsR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 turnSignalsRActionPerformed(evt);
@@ -1164,11 +1019,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         runningLights.setBackground(new java.awt.Color(0, 255, 51));
         runningLights.setText("Running Lights");
-        runningLights.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                runningLightsStateChanged(evt);
-            }
-        });
         runningLights.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 runningLightsActionPerformed(evt);
@@ -1178,11 +1028,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         brakeLights.setBackground(new java.awt.Color(0, 255, 51));
         brakeLights.setText("Brake Lights");
-        brakeLights.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                brakeLightsStateChanged(evt);
-            }
-        });
         brakeLights.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 brakeLightsActionPerformed(evt);
@@ -1193,11 +1038,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         licensePlateLights.setBackground(new java.awt.Color(0, 255, 51));
         licensePlateLights.setText("License Plate Lights");
         licensePlateLights.setToolTipText("");
-        licensePlateLights.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                licensePlateLightsStateChanged(evt);
-            }
-        });
         licensePlateLights.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 licensePlateLightsActionPerformed(evt);
@@ -1208,11 +1048,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         reverse.setBackground(new java.awt.Color(0, 255, 51));
         reverse.setText("Reverse");
         reverse.setToolTipText("");
-        reverse.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                reverseStateChanged(evt);
-            }
-        });
         reverse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 reverseActionPerformed(evt);
@@ -1223,11 +1058,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         suspensionComponents.setBackground(new java.awt.Color(0, 255, 51));
         suspensionComponents.setText("Suspension Components");
         suspensionComponents.setToolTipText("");
-        suspensionComponents.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                suspensionComponentsStateChanged(evt);
-            }
-        });
         suspensionComponents.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 suspensionComponentsActionPerformed(evt);
@@ -1238,11 +1068,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         wheelBearings.setBackground(new java.awt.Color(0, 255, 51));
         wheelBearings.setText("Wheel Bearings");
         wheelBearings.setToolTipText("");
-        wheelBearings.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                wheelBearingsStateChanged(evt);
-            }
-        });
         wheelBearings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wheelBearingsActionPerformed(evt);
@@ -1253,11 +1078,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         rotorsAndPadsF.setBackground(new java.awt.Color(0, 255, 51));
         rotorsAndPadsF.setText("Front Rotors & Pads");
         rotorsAndPadsF.setToolTipText("");
-        rotorsAndPadsF.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                rotorsAndPadsFStateChanged(evt);
-            }
-        });
         rotorsAndPadsF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rotorsAndPadsFActionPerformed(evt);
@@ -1268,11 +1088,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         rotorsAndPadsR.setBackground(new java.awt.Color(0, 255, 51));
         rotorsAndPadsR.setText("Rear Rotors & Pads");
         rotorsAndPadsR.setToolTipText("");
-        rotorsAndPadsR.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                rotorsAndPadsRStateChanged(evt);
-            }
-        });
         rotorsAndPadsR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rotorsAndPadsRActionPerformed(evt);
@@ -1283,11 +1098,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         spareJackTools.setBackground(new java.awt.Color(0, 255, 51));
         spareJackTools.setText("Spare, Jack, & Tools");
         spareJackTools.setToolTipText("");
-        spareJackTools.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spareJackToolsStateChanged(evt);
-            }
-        });
         spareJackTools.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 spareJackToolsActionPerformed(evt);
@@ -1298,11 +1108,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         exhaustSystem.setBackground(new java.awt.Color(0, 255, 51));
         exhaustSystem.setText("Exhaust System");
         exhaustSystem.setToolTipText("");
-        exhaustSystem.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                exhaustSystemStateChanged(evt);
-            }
-        });
         exhaustSystem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exhaustSystemActionPerformed(evt);
@@ -1313,11 +1118,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
         cvJointsAxlesSeals.setBackground(new java.awt.Color(0, 255, 51));
         cvJointsAxlesSeals.setText("CV Joints, Axles, Seals");
         cvJointsAxlesSeals.setToolTipText("");
-        cvJointsAxlesSeals.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                cvJointsAxlesSealsStateChanged(evt);
-            }
-        });
         cvJointsAxlesSeals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cvJointsAxlesSealsActionPerformed(evt);
@@ -1612,11 +1412,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         spareTire.setBackground(new java.awt.Color(0, 255, 51));
         spareTire.setText("Spare Tire");
-        spareTire.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spareTireStateChanged(evt);
-            }
-        });
         spareTire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 spareTireActionPerformed(evt);
@@ -1625,11 +1420,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         lrTire.setBackground(new java.awt.Color(0, 255, 51));
         lrTire.setText("LR Tire");
-        lrTire.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                lrTireStateChanged(evt);
-            }
-        });
         lrTire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lrTireActionPerformed(evt);
@@ -1638,11 +1428,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         lfTire.setBackground(new java.awt.Color(0, 255, 51));
         lfTire.setText("LF Tire");
-        lfTire.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                lfTireStateChanged(evt);
-            }
-        });
         lfTire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lfTireActionPerformed(evt);
@@ -1651,11 +1436,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         rrTire.setBackground(new java.awt.Color(0, 255, 51));
         rrTire.setText("RR Tire");
-        rrTire.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                rrTireStateChanged(evt);
-            }
-        });
         rrTire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rrTireActionPerformed(evt);
@@ -1664,11 +1444,6 @@ final class InspectionFrame extends javax.swing.JFrame  {
 
         rfTire.setBackground(new java.awt.Color(0, 255, 51));
         rfTire.setText("RF Tire");
-        rfTire.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                rfTireStateChanged(evt);
-            }
-        });
         rfTire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rfTireActionPerformed(evt);
@@ -2077,971 +1852,231 @@ final class InspectionFrame extends javax.swing.JFrame  {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void beltsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beltsActionPerformed
-        if (belts.isSelected()) {
-            beltsText.setVisible(true);
-            beltsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+    //Change the button colors and make textfield visible based button selection.
+    private void StateChange(JToggleButton button,JTextField buttonText){
+        if (button.isSelected()) {
+            buttonText.setVisible(true);
+            buttonText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+            button.setBackground(Color.RED);
             inspectionItemPanel.revalidate();
             inspectionItemPanel.repaint();
         } else {
-            beltsText.setVisible(false);
-            beltsText.setBorder(null);
+            buttonText.setVisible(false);
+            buttonText.setBorder(null);
+            button.setBackground(Color.GREEN);
         }
+    }
+    private void beltsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beltsActionPerformed
+        StateChange(belts,beltsText);
     }//GEN-LAST:event_beltsActionPerformed
 
-    private void beltsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_beltsStateChanged
-        
-        if (belts.isSelected()) {
-            belts.setBackground(Color.RED);
-        } else {
-            belts.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_beltsStateChanged
-
     private void coolantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coolantActionPerformed
-        if (coolant.isSelected()) {
-            coolantText.setVisible(true);
-            coolantText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            coolantText.setVisible(false);
-            coolantText.setBorder(null);
-        }
+        StateChange(coolant,coolantText);
     }//GEN-LAST:event_coolantActionPerformed
 
-    private void coolantStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_coolantStateChanged
-        if (coolant.isSelected()) {
-            coolant.setBackground(Color.RED);
-        } else {
-            coolant.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_coolantStateChanged
-
-    private void brakeFluidStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_brakeFluidStateChanged
-        if (brakeFluid.isSelected()) {
-            brakeFluid.setBackground(Color.RED);
-        } else {
-            brakeFluid.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_brakeFluidStateChanged
-
-    private void airFilterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_airFilterStateChanged
-        if (airFilter.isSelected()) {
-            airFilter.setBackground(Color.RED);
-        } else {
-            airFilter.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_airFilterStateChanged
-
     private void oilConditionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oilConditionActionPerformed
-        if (oilCondition.isSelected()) {
-            oilConditionText.setVisible(true);
-            oilConditionText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            oilConditionText.setVisible(false);
-            oilConditionText.setBorder(null);
-        }
+        StateChange(oilCondition,oilConditionText);
     }//GEN-LAST:event_oilConditionActionPerformed
 
     private void transmissionFluidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transmissionFluidActionPerformed
-        if (transmissionFluid.isSelected()) {
-            transmissionFluidText.setVisible(true);
-            transmissionFluidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            transmissionFluidText.setVisible(false);
-            transmissionFluidText.setBorder(null);
-        }
+        StateChange(transmissionFluid,transmissionFluidText);
     }//GEN-LAST:event_transmissionFluidActionPerformed
 
     private void batteryConditionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batteryConditionActionPerformed
-        if (batteryCondition.isSelected()) {
-            batteryConditionText.setVisible(true);
-            batteryConditionText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            batteryConditionText.setVisible(false);
-            batteryConditionText.setBorder(null);
-        }
+         StateChange(batteryCondition,batteryConditionText);
     }//GEN-LAST:event_batteryConditionActionPerformed
 
     private void washerFluidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_washerFluidActionPerformed
-        if (washerFluid.isSelected()) {
-            washerFluidText.setVisible(true);
-            washerFluidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            washerFluidText.setVisible(false);
-            washerFluidText.setBorder(null);
-        }
+            StateChange(washerFluid,washerFluidText);
     }//GEN-LAST:event_washerFluidActionPerformed
 
     private void motormountsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_motormountsActionPerformed
-        if (motormounts.isSelected()) {
-            motorMountsText.setVisible(true);
-            motorMountsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            motorMountsText.setVisible(false);
-            motorMountsText.setBorder(null);
-        }
+        StateChange(motormounts,motorMountsText);
     }//GEN-LAST:event_motormountsActionPerformed
 
     private void starterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_starterActionPerformed
-        if (starter.isSelected()) {
-            starterText.setVisible(true);
-            starterText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            starterText.setVisible(false);
-            starterText.setBorder(null);
-        }
+        StateChange(starter,starterText);
     }//GEN-LAST:event_starterActionPerformed
 
     private void chargingSystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chargingSystemActionPerformed
-        if (chargingSystem.isSelected()) {
-            chargingSystemText.setVisible(true);
-            chargingSystemText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            chargingSystemText.setVisible(false);
-            chargingSystemText.setBorder(null); 
-        }
+        StateChange(chargingSystem,chargingSystemText);
     }//GEN-LAST:event_chargingSystemActionPerformed
 
     private void seatBeltsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seatBeltsActionPerformed
-        if (seatBelts.isSelected()) {
-            seatBeltsText.setVisible(true);
-            seatBeltsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            seatBeltsText.setVisible(false);
-            seatBeltsText.setBorder(null);     
-        }
+        StateChange(seatBelts,seatBeltsText);
     }//GEN-LAST:event_seatBeltsActionPerformed
 
     private void doorLocksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doorLocksActionPerformed
-        if (doorLocks.isSelected()) {
-            doorLocksText.setVisible(true);
-            doorLocksText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            doorLocksText.setVisible(false);
-            doorLocksText.setBorder(null);
-        }
+        StateChange(doorLocks,doorLocksText);
     }//GEN-LAST:event_doorLocksActionPerformed
 
     private void climateControlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_climateControlActionPerformed
-        if (climateControl.isSelected()) {
-            climateControlText.setVisible(true);
-            climateControlText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            climateControlText.setVisible(false);
-            climateControlText.setBorder(null); 
-        }
+        StateChange(climateControl,climateControlText);
     }//GEN-LAST:event_climateControlActionPerformed
 
     private void instrumentClusterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_instrumentClusterActionPerformed
-        if (instrumentCluster.isSelected()) {
-            instrumentClusterText.setVisible(true);
-            instrumentClusterText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            instrumentClusterText.setVisible(false);
-            instrumentClusterText.setBorder(null);  
-        }
+        StateChange(instrumentCluster,instrumentClusterText);
     }//GEN-LAST:event_instrumentClusterActionPerformed
 
     private void milLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_milLightActionPerformed
-        if (milLight.isSelected()) {
-            milLightText.setVisible(true);
-            milLightText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            milLightText.setVisible(false);
-            milLightText.setBorder(null);
-        }
+        StateChange(milLight,milLightText);
     }//GEN-LAST:event_milLightActionPerformed
 
     private void absBrakeAirbagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_absBrakeAirbagActionPerformed
-        if (absBrakeAirbag.isSelected()) {
-            absBrakeAirbagText.setVisible(true);
-            absBrakeAirbagText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            absBrakeAirbagText.setVisible(false);
-            absBrakeAirbagText.setBorder(null);
-        }
+        StateChange(absBrakeAirbag,absBrakeAirbagText);
     }//GEN-LAST:event_absBrakeAirbagActionPerformed
 
     private void windshieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_windshieldActionPerformed
-        if (windshield.isSelected()) {
-            windshieldText.setVisible(true);
-            windshieldText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            windshieldText.setVisible(false);
-            windshieldText.setBorder(null); 
-        }
+        StateChange(windshield,windshieldText);
     }//GEN-LAST:event_windshieldActionPerformed
 
     private void MirrorsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MirrorsActionPerformed
-        if (Mirrors.isSelected()) {
-            mirrorsText.setVisible(true);
-            mirrorsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            mirrorsText.setVisible(false);
-            mirrorsText.setBorder(null);
-        }
+        StateChange(Mirrors,mirrorsText);
     }//GEN-LAST:event_MirrorsActionPerformed
 
     private void powerWindowsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerWindowsActionPerformed
-        if (powerWindows.isSelected()) {
-            powerWindowsText.setVisible(true);
-            powerWindowsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            powerWindowsText.setVisible(false);
-            powerWindowsText.setBorder(null);  
-        }
+        StateChange(powerWindows,powerWindowsText);
     }//GEN-LAST:event_powerWindowsActionPerformed
 
     private void stereoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stereoActionPerformed
-        if (stereo.isSelected()) {
-            stereoText.setVisible(true);
-            stereoText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            stereoText.setVisible(false);
-            stereoText.setBorder(null);
-        }
+        StateChange(stereo,stereoText);
     }//GEN-LAST:event_stereoActionPerformed
 
     private void doorHandlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doorHandlesActionPerformed
-        if (doorHandles.isSelected()) {
-            doorHandlesText.setVisible(true);
-            doorHandlesText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            doorHandlesText.setVisible(false);
-            doorHandlesText.setBorder(null);   
-        }
+         StateChange(doorHandles,doorHandlesText);
     }//GEN-LAST:event_doorHandlesActionPerformed
 
     private void hornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hornActionPerformed
-        if (horn.isSelected()) {
-            hornText.setVisible(true);
-            hornText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            hornText.setVisible(false);
-            hornText.setBorder(null);
-        }
+        StateChange(doorHandles,doorHandlesText);
     }//GEN-LAST:event_hornActionPerformed
 
     private void wipersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wipersActionPerformed
-        if (wipers.isSelected()) {
-            wipersText.setVisible(true);
-            wipersText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            wipersText.setVisible(false);
-            wipersText.setBorder(null);
-        }
+        StateChange(wipers,wipersText);
     }//GEN-LAST:event_wipersActionPerformed
 
     private void lowBeamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lowBeamsActionPerformed
-        if (lowBeams.isSelected()) {
-            lowBeamsText.setVisible(true);
-            lowBeamsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            lowBeamsText.setVisible(false);
-            lowBeamsText.setBorder(null); 
-        }
+        StateChange(lowBeams,lowBeamsText);
     }//GEN-LAST:event_lowBeamsActionPerformed
 
     private void highBeamsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_highBeamsActionPerformed
-        if (highBeams.isSelected()) {
-            highBeamsText.setVisible(true);
-            highBeamsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            highBeamsText.setVisible(false);
-            highBeamsText.setBorder(null);
-        }
+        StateChange(highBeams,highBeamsText);
     }//GEN-LAST:event_highBeamsActionPerformed
 
     private void fogLightsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fogLightsActionPerformed
-        if (fogLights.isSelected()) {
-            fogLightsText.setVisible(true);
-            fogLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            fogLightsText.setVisible(false);
-            fogLightsText.setBorder(null);
-        }
+        StateChange(fogLights,fogLightsText);
     }//GEN-LAST:event_fogLightsActionPerformed
 
     private void turnSignalsFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnSignalsFActionPerformed
-        if (turnSignalsF.isSelected()) {
-            turnSignalsFText.setVisible(true);
-            turnSignalsFText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            turnSignalsFText.setVisible(false);
-            turnSignalsFText.setBorder(null);
-        }
+        StateChange(turnSignalsF,turnSignalsFText);
     }//GEN-LAST:event_turnSignalsFActionPerformed
 
     private void turnSignalsRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turnSignalsRActionPerformed
-        if (turnSignalsR.isSelected()) {
-            turnSignalsRText.setVisible(true);
-            turnSignalsRText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            turnSignalsRText.setVisible(false);
-            turnSignalsRText.setBorder(null);
-        }
+        StateChange(turnSignalsR,turnSignalsRText);
     }//GEN-LAST:event_turnSignalsRActionPerformed
 
     private void runningLightsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runningLightsActionPerformed
-        if (runningLights.isSelected()) {
-            runningLightsText.setVisible(true);
-            runningLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            runningLightsText.setVisible(false);
-            runningLightsText.setBorder(null);
-        }
+        StateChange(runningLights,runningLightsText);
     }//GEN-LAST:event_runningLightsActionPerformed
 
     private void brakeLightsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brakeLightsActionPerformed
-        if (brakeLights.isSelected()) {
-            brakeLightsText.setVisible(true);
-            brakeLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            brakeLightsText.setVisible(false);
-            brakeLightsText.setBorder(null);
-        }
+        StateChange(brakeLights,brakeLightsText);
     }//GEN-LAST:event_brakeLightsActionPerformed
 
     private void licensePlateLightsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_licensePlateLightsActionPerformed
-        if (licensePlateLights.isSelected()) {
-            licensePlateLightsText.setVisible(true);
-            licensePlateLightsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            licensePlateLightsText.setVisible(false);
-            licensePlateLightsText.setBorder(null);
-        }
+        StateChange(licensePlateLights,licensePlateLightsText);
     }//GEN-LAST:event_licensePlateLightsActionPerformed
 
     private void reverseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reverseActionPerformed
-        if (reverse.isSelected()) {
-            reverseText.setVisible(true);
-            reverseText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            reverseText.setVisible(false);
-            reverseText.setBorder(null); 
-        }
+        StateChange(reverse,reverseText);
     }//GEN-LAST:event_reverseActionPerformed
 
     private void suspensionComponentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_suspensionComponentsActionPerformed
-        if (suspensionComponents.isSelected()) {
-            suspensionComponentsText.setVisible(true);
-            suspensionComponentsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            suspensionComponentsText.setVisible(false);
-            suspensionComponentsText.setBorder(null);
-        }
+        StateChange(suspensionComponents,suspensionComponentsText);
     }//GEN-LAST:event_suspensionComponentsActionPerformed
 
     private void wheelBearingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wheelBearingsActionPerformed
-        if (wheelBearings.isSelected()) {
-            wheelBearingsText.setVisible(true);
-            wheelBearingsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            wheelBearingsText.setVisible(false);
-            wheelBearingsText.setBorder(null);
-        }
+       StateChange(wheelBearings,wheelBearingsText);
     }//GEN-LAST:event_wheelBearingsActionPerformed
 
     private void rotorsAndPadsFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rotorsAndPadsFActionPerformed
-        if (rotorsAndPadsF.isSelected()) {
-            rotorsAndPadsFText.setVisible(true);
-            rotorsAndPadsFText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            rotorsAndPadsFText.setVisible(false);
-            rotorsAndPadsFText.setBorder(null);
-        }
+        StateChange(rotorsAndPadsF,rotorsAndPadsFText);
     }//GEN-LAST:event_rotorsAndPadsFActionPerformed
 
     private void rotorsAndPadsRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rotorsAndPadsRActionPerformed
-        if (rotorsAndPadsR.isSelected()) {
-            rotorsAndPadsRText.setVisible(true);
-            rotorsAndPadsRText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            rotorsAndPadsRText.setVisible(false);
-            rotorsAndPadsRText.setBorder(null);
-        }
+        StateChange(rotorsAndPadsR,rotorsAndPadsRText);
     }//GEN-LAST:event_rotorsAndPadsRActionPerformed
 
     private void spareJackToolsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spareJackToolsActionPerformed
-        if (spareJackTools.isSelected()) {
-            spareJackToolsText.setVisible(true);
-            spareJackToolsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            spareJackToolsText.setVisible(false);
-            spareJackToolsText.setBorder(null);
-        }
+        StateChange(spareJackTools,spareJackToolsText);
     }//GEN-LAST:event_spareJackToolsActionPerformed
 
     private void exhaustSystemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exhaustSystemActionPerformed
-        if (exhaustSystem.isSelected()) {
-            exhaustSystemText.setVisible(true);
-            exhaustSystemText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            exhaustSystemText.setVisible(false);
-            exhaustSystemText.setBorder(null);
-        }
+        StateChange(exhaustSystem,exhaustSystemText);
     }//GEN-LAST:event_exhaustSystemActionPerformed
 
     private void cvJointsAxlesSealsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cvJointsAxlesSealsActionPerformed
-        if (cvJointsAxlesSeals.isSelected()) {
-            cvJointsAxlesSealsText.setVisible(true);
-            cvJointsAxlesSealsText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            cvJointsAxlesSealsText.setVisible(false);
-            cvJointsAxlesSealsText.setBorder(null);
-        }
+        StateChange(cvJointsAxlesSeals,cvJointsAxlesSealsText);
     }//GEN-LAST:event_cvJointsAxlesSealsActionPerformed
 
     private void brakeFluidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brakeFluidActionPerformed
-        if (brakeFluid.isSelected()) {
-            brakeFluidText.setVisible(true);
-            brakeFluidText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            brakeFluidText.setVisible(false);
-            brakeFluidText.setBorder(null);
-        }
+        StateChange(brakeFluid,brakeFluidText);
     }//GEN-LAST:event_brakeFluidActionPerformed
 
     private void airFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_airFilterActionPerformed
-        if (airFilter.isSelected()) {
-            airFilterText.setVisible(true);
-            airFilterText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            inspectionItemPanel.revalidate();
-            inspectionItemPanel.repaint();
-        } else {
-            airFilterText.setVisible(false);
-            airFilterText.setBorder(null);
-        }
+       StateChange(airFilter,airFilterText);
     }//GEN-LAST:event_airFilterActionPerformed
 
-    private void oilConditionStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_oilConditionStateChanged
-        if (oilCondition.isSelected()) {
-            oilCondition.setBackground(Color.RED);
-        } else {
-            oilCondition.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_oilConditionStateChanged
-
-    private void transmissionFluidStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_transmissionFluidStateChanged
-        if (transmissionFluid.isSelected()) {
-            transmissionFluid.setBackground(Color.RED);
-        } else {
-            transmissionFluid.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_transmissionFluidStateChanged
-
-    private void batteryConditionStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_batteryConditionStateChanged
-        if (batteryCondition.isSelected()) {
-            batteryCondition.setBackground(Color.RED);
-        } else {
-            batteryCondition.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_batteryConditionStateChanged
-
-    private void washerFluidStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_washerFluidStateChanged
-        if (washerFluid.isSelected()) {
-            washerFluid.setBackground(Color.RED);
-        } else {
-            washerFluid.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_washerFluidStateChanged
-
-    private void motormountsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_motormountsStateChanged
-        if (motormounts.isSelected()) {
-            motormounts.setBackground(Color.RED);
-        } else {
-            motormounts.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_motormountsStateChanged
-
-    private void starterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_starterStateChanged
-        if (starter.isSelected()) {
-            starter.setBackground(Color.RED);
-        } else {
-            starter.setBackground(Color.GREEN);
-        }    }//GEN-LAST:event_starterStateChanged
-
-    private void chargingSystemStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_chargingSystemStateChanged
-        if (chargingSystem.isSelected()) {
-            chargingSystem.setBackground(Color.RED);
-        } else {
-            chargingSystem.setBackground(Color.GREEN);
-        }    }//GEN-LAST:event_chargingSystemStateChanged
-
-    private void seatBeltsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_seatBeltsStateChanged
-        if (seatBelts.isSelected()) {
-            seatBelts.setBackground(Color.RED);
-        } else {
-            seatBelts.setBackground(Color.GREEN);
-        }    }//GEN-LAST:event_seatBeltsStateChanged
-
-    private void doorLocksStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_doorLocksStateChanged
-        if (doorLocks.isSelected()) {
-            doorLocks.setBackground(Color.RED);
-        } else {
-            doorLocks.setBackground(Color.GREEN);
-        }    }//GEN-LAST:event_doorLocksStateChanged
-
-    private void climateControlStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_climateControlStateChanged
-        if (climateControl.isSelected()) {
-            climateControl.setBackground(Color.RED);
-        } else {
-            climateControl.setBackground(Color.GREEN);
-        }    }//GEN-LAST:event_climateControlStateChanged
-
-    private void instrumentClusterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_instrumentClusterStateChanged
-        if (instrumentCluster.isSelected()) {
-            instrumentCluster.setBackground(Color.RED);
-        } else {
-            instrumentCluster.setBackground(Color.GREEN);
-        }    }//GEN-LAST:event_instrumentClusterStateChanged
-
-    private void milLightStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_milLightStateChanged
-        if (milLight.isSelected()) {
-            milLight.setBackground(Color.RED);
-        } else {
-            milLight.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_milLightStateChanged
-
-    private void absBrakeAirbagStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_absBrakeAirbagStateChanged
-        if (absBrakeAirbag.isSelected()) {
-            absBrakeAirbag.setBackground(Color.RED);
-        } else {
-            absBrakeAirbag.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_absBrakeAirbagStateChanged
-
-    private void windshieldStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_windshieldStateChanged
-        if (windshield.isSelected()) {
-            windshield.setBackground(Color.RED);
-        } else {
-            windshield.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_windshieldStateChanged
-
-    private void MirrorsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_MirrorsStateChanged
-        if (Mirrors.isSelected()) {
-            Mirrors.setBackground(Color.RED);
-        } else {
-            Mirrors.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_MirrorsStateChanged
-
-    private void powerWindowsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_powerWindowsStateChanged
-        if (powerWindows.isSelected()) {
-            powerWindows.setBackground(Color.RED);
-        } else {
-            powerWindows.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_powerWindowsStateChanged
-
-    private void stereoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_stereoStateChanged
-        if (stereo.isSelected()) {
-            stereo.setBackground(Color.RED);
-        } else {
-            stereo.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_stereoStateChanged
-
-    private void doorHandlesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_doorHandlesStateChanged
-        if (doorHandles.isSelected()) {
-            doorHandles.setBackground(Color.RED);
-        } else {
-            doorHandles.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_doorHandlesStateChanged
-
-    private void hornStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_hornStateChanged
-        if (horn.isSelected()) {
-            horn.setBackground(Color.RED);
-        } else {
-            horn.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_hornStateChanged
-
-    private void wipersStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_wipersStateChanged
-        if (wipers.isSelected()) {
-            wipers.setBackground(Color.RED);
-        } else {
-            wipers.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_wipersStateChanged
-
-    private void lowBeamsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_lowBeamsStateChanged
-        if (lowBeams.isSelected()) {
-            lowBeams.setBackground(Color.RED);
-        } else {
-            lowBeams.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_lowBeamsStateChanged
-
-    private void highBeamsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_highBeamsStateChanged
-        if (highBeams.isSelected()) {
-            highBeams.setBackground(Color.RED);
-        } else {
-            highBeams.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_highBeamsStateChanged
-
-    private void fogLightsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_fogLightsStateChanged
-        if (fogLights.isSelected()) {
-            fogLights.setBackground(Color.RED);
-        } else {
-            fogLights.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_fogLightsStateChanged
-
-    private void turnSignalsFStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_turnSignalsFStateChanged
-        if (turnSignalsF.isSelected()) {
-            turnSignalsF.setBackground(Color.RED);
-        } else {
-            turnSignalsF.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_turnSignalsFStateChanged
-
-    private void turnSignalsRStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_turnSignalsRStateChanged
-        if (turnSignalsR.isSelected()) {
-            turnSignalsR.setBackground(Color.RED);
-        } else {
-            turnSignalsR.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_turnSignalsRStateChanged
-
-    private void runningLightsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_runningLightsStateChanged
-        if (runningLights.isSelected()) {
-            runningLights.setBackground(Color.RED);
-        } else {
-            runningLights.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_runningLightsStateChanged
-
-    private void brakeLightsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_brakeLightsStateChanged
-        if (brakeLights.isSelected()) {
-            brakeLights.setBackground(Color.RED);
-        } else {
-            brakeLights.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_brakeLightsStateChanged
-
-    private void licensePlateLightsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_licensePlateLightsStateChanged
-        if (licensePlateLights.isSelected()) {
-            licensePlateLights.setBackground(Color.RED);
-        } else {
-            licensePlateLights.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_licensePlateLightsStateChanged
-
-    private void reverseStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_reverseStateChanged
-        if (reverse.isSelected()) {
-            reverse.setBackground(Color.RED);
-        } else {
-            reverse.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_reverseStateChanged
-
-    private void suspensionComponentsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_suspensionComponentsStateChanged
-        if (suspensionComponents.isSelected()) {
-            suspensionComponents.setBackground(Color.RED);
-        } else {
-            suspensionComponents.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_suspensionComponentsStateChanged
-
-    private void wheelBearingsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_wheelBearingsStateChanged
-        if (wheelBearings.isSelected()) {
-            wheelBearings.setBackground(Color.RED);
-        } else {
-            wheelBearings.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_wheelBearingsStateChanged
-
-    private void rotorsAndPadsFStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rotorsAndPadsFStateChanged
-        if (rotorsAndPadsF.isSelected()) {
-            rotorsAndPadsF.setBackground(Color.RED);
-        } else {
-            rotorsAndPadsF.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_rotorsAndPadsFStateChanged
-
-    private void rotorsAndPadsRStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rotorsAndPadsRStateChanged
-        if (rotorsAndPadsR.isSelected()) {
-            rotorsAndPadsR.setBackground(Color.RED);
-        } else {
-            rotorsAndPadsR.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_rotorsAndPadsRStateChanged
-
-    private void spareJackToolsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spareJackToolsStateChanged
-        if (spareJackTools.isSelected()) {
-            spareJackTools.setBackground(Color.RED);
-        } else {
-            spareJackTools.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_spareJackToolsStateChanged
-
-    private void exhaustSystemStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_exhaustSystemStateChanged
-        if (exhaustSystem.isSelected()) {
-            exhaustSystem.setBackground(Color.RED);
-        } else {
-            exhaustSystem.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_exhaustSystemStateChanged
-
-    private void cvJointsAxlesSealsStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_cvJointsAxlesSealsStateChanged
-        if (cvJointsAxlesSeals.isSelected()) {
-            cvJointsAxlesSeals.setBackground(Color.RED);
-        } else {
-            cvJointsAxlesSeals.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_cvJointsAxlesSealsStateChanged
-
     private void rfTireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rfTireActionPerformed
-        if (rfTire.isSelected()) {
-            rfTireText.setVisible(true);
-            rfTireText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            TirePanel.revalidate();
-            TirePanel.repaint();
-        } else {
-            rfTireText.setVisible(false);
-            rfTireText.setBorder(null);
-        }
+        StateChange(rfTire,rfTireText);
     }//GEN-LAST:event_rfTireActionPerformed
 
     private void lfTireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lfTireActionPerformed
-        if (lfTire.isSelected()) {
-            lfTireText.setVisible(true);
-            lfTireText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            TirePanel.revalidate();
-            TirePanel.repaint();
-        } else {
-            lfTireText.setVisible(false);
-            lfTireText.setBorder(null);
-        }
+        StateChange(lfTire,lfTireText);
     }//GEN-LAST:event_lfTireActionPerformed
 
-    private void rfTireStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rfTireStateChanged
-        if (rfTire.isSelected()) {
-            rfTire.setBackground(Color.RED);
-        } else {
-            rfTire.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_rfTireStateChanged
-
-    private void rrTireStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rrTireStateChanged
-        if (rrTire.isSelected()) {
-            rrTire.setBackground(Color.RED);
-        } else {
-            rrTire.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_rrTireStateChanged
-
-    private void lrTireStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_lrTireStateChanged
-        if (lrTire.isSelected()) {
-            lrTire.setBackground(Color.RED);
-        } else {
-            lrTire.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_lrTireStateChanged
-
-    private void lfTireStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_lfTireStateChanged
-        if (lfTire.isSelected()) {
-            lfTire.setBackground(Color.RED);
-        } else {
-            lfTire.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_lfTireStateChanged
-
-    private void spareTireStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spareTireStateChanged
-        if (spareTire.isSelected()) {
-            spareTire.setBackground(Color.RED);
-        } else {
-            spareTire.setBackground(Color.GREEN);
-        }
-    }//GEN-LAST:event_spareTireStateChanged
-
     private void lrTireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lrTireActionPerformed
-        if (lrTire.isSelected()) {
-            lrTireText.setVisible(true);
-            lrTireText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            TirePanel.revalidate();
-            TirePanel.repaint();
-        } else {
-            lrTireText.setVisible(false);
-            lrTireText.setBorder(null);
-        }
+        StateChange(lrTire,lrTireText);
     }//GEN-LAST:event_lrTireActionPerformed
 
     private void spareTireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spareTireActionPerformed
-        if (spareTire.isSelected()) {
-            spareTireText.setVisible(true);
-            spareTireText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            TirePanel.revalidate();
-            TirePanel.repaint();
-        } else {
-            spareTireText.setVisible(false);
-            spareTireText.setBorder(null);
-        }
+        StateChange(spareTire,spareTireText);
     }//GEN-LAST:event_spareTireActionPerformed
 
     private void rrTireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rrTireActionPerformed
-        if (rrTire.isSelected()) {
-            rrTireText.setVisible(true);
-            rrTireText.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-            TirePanel.revalidate();
-            TirePanel.repaint();
-        } else {
-            rrTireText.setVisible(false);
-            rrTireText.setBorder(null);
-        }
+        StateChange(rrTire,rrTireText);
     }//GEN-LAST:event_rrTireActionPerformed
 
-    private void lfTireTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lfTireTextFocusLost
-        String lfTire1;
-        lfTire1 = lfTireText.getText();
-        if (!lfTire1.equals("")&& !lfTire1.equals(" ")){
-        int lfTire = Integer.parseInt(lfTire1);
-        if (lfTire <= 5) {
-            lfTireText.setBackground(Color.RED);
-        } else if (lfTire <= 10) {
-            lfTireText.setBackground(Color.YELLOW);
+    private void TextFocusLost(JTextField tireText){
+        String Tire;
+        Tire = tireText.getText();
+        if (!Tire.equals("")&& !Tire.equals(" ")){
+        int TireN = Integer.parseInt(Tire);
+        if (TireN <= 5) {
+            tireText.setBackground(Color.RED);
+        } else if (TireN <= 10) {
+            tireText.setBackground(Color.YELLOW);
         } else
-            lfTireText.setBackground(Color.GREEN);
+            tireText.setBackground(Color.GREEN);
         }
+    }
+    private void lfTireTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lfTireTextFocusLost
+        TextFocusLost(lfTireText);
     }//GEN-LAST:event_lfTireTextFocusLost
 
     private void rfTireTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_rfTireTextFocusLost
-        String rfTire1;
-        rfTire1 = rfTireText.getText();
-        if (!rfTire1.equals("")&& !rfTire1.equals(" ")){
-        int rfTire = Integer.parseInt(rfTire1);
-        if (rfTire <= 5) {
-            rfTireText.setBackground(Color.RED);
-        } else if (rfTire <= 10) {
-            rfTireText.setBackground(Color.YELLOW);
-        } else
-            rfTireText.setBackground(Color.GREEN);
-        }
+        TextFocusLost(rfTireText);
     }//GEN-LAST:event_rfTireTextFocusLost
 
     private void lrTireTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_lrTireTextFocusLost
-        String lrTire1;
-        lrTire1 = lrTireText.getText();
-        if (!lrTire1.equals("")&& !lrTire1.equals(" ")){
-        int lrTire = Integer.parseInt(lrTire1);
-        if (lrTire <= 5) {
-            lrTireText.setBackground(Color.RED);
-        } else if (lrTire <= 10) {
-            lrTireText.setBackground(Color.YELLOW);
-        } else
-            lrTireText.setBackground(Color.GREEN);
-        }
+        TextFocusLost(lrTireText);
     }//GEN-LAST:event_lrTireTextFocusLost
 
     private void rrTireTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_rrTireTextFocusLost
-        String rrTire1;
-        rrTire1 = rrTireText.getText();
-        if (!rrTire1.equals("")&& !rrTire1.equals(" ")){
-        int rrTire = Integer.parseInt(rrTire1);
-        if (rrTire <= 5) {
-            rrTireText.setBackground(Color.RED);
-        } else if (rrTire <= 10) {
-            rrTireText.setBackground(Color.YELLOW);
-        } else
-            rrTireText.setBackground(Color.GREEN);
-        }
+        TextFocusLost(rrTireText);
     }//GEN-LAST:event_rrTireTextFocusLost
 
     private void spareTireTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_spareTireTextFocusLost
-        String spareTire1;
-        spareTire1 = spareTireText.getText();
-        if (!spareTire1.equals("")&& !spareTire1.equals(" ")){
-        int spareTire = Integer.parseInt(spareTire1);
-        if (spareTire <= 5) {
-            spareTireText.setBackground(Color.RED);
-        } else if (spareTire <= 10) {
-            spareTireText.setBackground(Color.YELLOW);
-        } else if (spareTire > 10) {
-            spareTireText.setBackground(Color.GREEN);
-        }
-        }
+        TextFocusLost(spareTireText);
     }//GEN-LAST:event_spareTireTextFocusLost
 
     String [] ReadField = new String [80];

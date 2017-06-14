@@ -1331,7 +1331,6 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="brakeFluidStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="brakeFluidActionPerformed"/>
               </Events>
               <Constraints>
@@ -1351,7 +1350,6 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="coolantStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coolantActionPerformed"/>
               </Events>
               <Constraints>
@@ -1372,7 +1370,6 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="beltsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="beltsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1392,7 +1389,6 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="airFilterStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="airFilterActionPerformed"/>
               </Events>
               <Constraints>
@@ -1409,7 +1405,6 @@
                 <Property name="text" type="java.lang.String" value="Oil Condition"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="oilConditionStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oilConditionActionPerformed"/>
               </Events>
               <AuxValues>
@@ -1429,7 +1424,6 @@
                 <Property name="text" type="java.lang.String" value="Trans Fluid"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="transmissionFluidStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="transmissionFluidActionPerformed"/>
               </Events>
               <AuxValues>
@@ -1451,7 +1445,6 @@
                 <Property name="iconTextGap" type="int" value="0"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="batteryConditionStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="batteryConditionActionPerformed"/>
               </Events>
               <Constraints>
@@ -1468,7 +1461,6 @@
                 <Property name="text" type="java.lang.String" value="Washer Fluid"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="washerFluidStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="washerFluidActionPerformed"/>
               </Events>
               <Constraints>
@@ -1485,7 +1477,6 @@
                 <Property name="text" type="java.lang.String" value="Motor Mounts"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="motormountsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="motormountsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1502,7 +1493,6 @@
                 <Property name="text" type="java.lang.String" value="Starter"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="starterStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="starterActionPerformed"/>
               </Events>
               <Constraints>
@@ -1519,7 +1509,6 @@
                 <Property name="text" type="java.lang.String" value="Charging System"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="chargingSystemStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chargingSystemActionPerformed"/>
               </Events>
               <Constraints>
@@ -1536,7 +1525,6 @@
                 <Property name="text" type="java.lang.String" value="Seat Belts"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="seatBeltsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seatBeltsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1553,7 +1541,6 @@
                 <Property name="text" type="java.lang.String" value="Door Locks"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="doorLocksStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doorLocksActionPerformed"/>
               </Events>
               <Constraints>
@@ -1570,7 +1557,6 @@
                 <Property name="text" type="java.lang.String" value="Climate Control"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="climateControlStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="climateControlActionPerformed"/>
               </Events>
               <Constraints>
@@ -1587,7 +1573,6 @@
                 <Property name="text" type="java.lang.String" value="Instrument Cluster"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="instrumentClusterStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="instrumentClusterActionPerformed"/>
               </Events>
               <Constraints>
@@ -1604,7 +1589,6 @@
                 <Property name="text" type="java.lang.String" value="MIL Light"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="milLightStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="milLightActionPerformed"/>
               </Events>
               <Constraints>
@@ -1621,7 +1605,6 @@
                 <Property name="text" type="java.lang.String" value="ABS/Brake/Airbag"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="absBrakeAirbagStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="absBrakeAirbagActionPerformed"/>
               </Events>
               <Constraints>
@@ -1638,7 +1621,6 @@
                 <Property name="text" type="java.lang.String" value="Windshield"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="windshieldStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="windshieldActionPerformed"/>
               </Events>
               <Constraints>
@@ -1655,7 +1637,6 @@
                 <Property name="text" type="java.lang.String" value="Mirrors"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="MirrorsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MirrorsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1672,7 +1653,6 @@
                 <Property name="text" type="java.lang.String" value="Power Windows"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="powerWindowsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="powerWindowsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1689,7 +1669,6 @@
                 <Property name="text" type="java.lang.String" value="Stereo"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="stereoStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="stereoActionPerformed"/>
               </Events>
               <Constraints>
@@ -1706,7 +1685,6 @@
                 <Property name="text" type="java.lang.String" value="Door Handles"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="doorHandlesStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doorHandlesActionPerformed"/>
               </Events>
               <Constraints>
@@ -1723,7 +1701,6 @@
                 <Property name="text" type="java.lang.String" value="Horn"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="hornStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="hornActionPerformed"/>
               </Events>
               <Constraints>
@@ -1740,7 +1717,6 @@
                 <Property name="text" type="java.lang.String" value="Wipers"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="wipersStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wipersActionPerformed"/>
               </Events>
               <Constraints>
@@ -1757,7 +1733,6 @@
                 <Property name="text" type="java.lang.String" value="Low Beams"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="lowBeamsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lowBeamsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1774,7 +1749,6 @@
                 <Property name="text" type="java.lang.String" value="High Beams"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="highBeamsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="highBeamsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1791,7 +1765,6 @@
                 <Property name="text" type="java.lang.String" value="Fog Lights"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="fogLightsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fogLightsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1808,7 +1781,6 @@
                 <Property name="text" type="java.lang.String" value="Turn Signals (F)"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="turnSignalsFStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="turnSignalsFActionPerformed"/>
               </Events>
               <Constraints>
@@ -1825,7 +1797,6 @@
                 <Property name="text" type="java.lang.String" value="Turn Signals (R)"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="turnSignalsRStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="turnSignalsRActionPerformed"/>
               </Events>
               <Constraints>
@@ -1842,7 +1813,6 @@
                 <Property name="text" type="java.lang.String" value="Running Lights"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="runningLightsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="runningLightsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1859,7 +1829,6 @@
                 <Property name="text" type="java.lang.String" value="Brake Lights"/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="brakeLightsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="brakeLightsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1877,7 +1846,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="licensePlateLightsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="licensePlateLightsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1895,7 +1863,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="reverseStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reverseActionPerformed"/>
               </Events>
               <Constraints>
@@ -1913,7 +1880,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="suspensionComponentsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="suspensionComponentsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1931,7 +1897,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="wheelBearingsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wheelBearingsActionPerformed"/>
               </Events>
               <Constraints>
@@ -1949,7 +1914,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rotorsAndPadsFStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rotorsAndPadsFActionPerformed"/>
               </Events>
               <Constraints>
@@ -1967,7 +1931,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rotorsAndPadsRStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rotorsAndPadsRActionPerformed"/>
               </Events>
               <Constraints>
@@ -1985,7 +1948,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spareJackToolsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spareJackToolsActionPerformed"/>
               </Events>
               <Constraints>
@@ -2003,7 +1965,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="exhaustSystemStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exhaustSystemActionPerformed"/>
               </Events>
               <Constraints>
@@ -2021,7 +1982,6 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="cvJointsAxlesSealsStateChanged"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cvJointsAxlesSealsActionPerformed"/>
               </Events>
               <Constraints>
@@ -2880,7 +2840,6 @@
             <Property name="text" type="java.lang.String" value="Spare Tire"/>
           </Properties>
           <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spareTireStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="spareTireActionPerformed"/>
           </Events>
         </Component>
@@ -2892,7 +2851,6 @@
             <Property name="text" type="java.lang.String" value="LR Tire"/>
           </Properties>
           <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="lrTireStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lrTireActionPerformed"/>
           </Events>
         </Component>
@@ -2904,7 +2862,6 @@
             <Property name="text" type="java.lang.String" value="LF Tire"/>
           </Properties>
           <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="lfTireStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lfTireActionPerformed"/>
           </Events>
         </Component>
@@ -2916,7 +2873,6 @@
             <Property name="text" type="java.lang.String" value="RR Tire"/>
           </Properties>
           <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rrTireStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rrTireActionPerformed"/>
           </Events>
         </Component>
@@ -2928,7 +2884,6 @@
             <Property name="text" type="java.lang.String" value="RF Tire"/>
           </Properties>
           <Events>
-            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="rfTireStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rfTireActionPerformed"/>
           </Events>
         </Component>
